@@ -113,5 +113,52 @@ namespace DevGuru.Resources.ru {
                 return ResourceManager.GetString("Flyweight_Step6", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Контекст хранит ссылку на объект конкретной стратегии, работая с ним через общий интерфейс стратегий..
+        /// </summary>
+        internal static string Strategy_Step1 {
+            get {
+                return ResourceManager.GetString("Strategy_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Стратегия определяет интерфейс, общий для всех вариаций алгоритма. Контекст использует этот интерфейс для вызова алгоритма.
+        ///
+        ///Для контекста неважно, какая именно вариация алгоритма будет выбрана, так как все они имеют одинаковый интерфейс..
+        /// </summary>
+        internal static string Strategy_Step2 {
+            get {
+                return ResourceManager.GetString("Strategy_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретные стратегии реализуют различные вариации алгоритма..
+        /// </summary>
+        internal static string Strategy_Step3 {
+            get {
+                return ResourceManager.GetString("Strategy_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Во время выполнения программы контекст получает вызовы от клиента и делегирует их объекту конкретной стратегии..
+        /// </summary>
+        internal static string Strategy_Step4 {
+            get {
+                return ResourceManager.GetString("Strategy_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клиент должен создать объект конкретной стратегии и передать его в конструктор контекста. Кроме этого, клиент должен иметь возможность заменить стратегию на лету, используя сеттер. Благодаря этому, контекст не будет знать о том, какая именно стратегия сейчас выбрана..
+        /// </summary>
+        internal static string Strategy_Step5 {
+            get {
+                return ResourceManager.GetString("Strategy_Step5", resourceCulture);
+            }
+        }
     }
 }
