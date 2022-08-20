@@ -69,7 +69,7 @@ namespace DevGuru.Core.TemplateMethod
                 //throw new InvalidOperationException("ESign file should be named 'key.dat'");
                 Console.WriteLine("InvalidOperationException with 'ESign file should be named 'key.dat'' message.");
             }
-            else if (!Path.GetDirectoryName(passport.FullName).Contains("diya", StringComparison.OrdinalIgnoreCase)) // Some dummy validation specific for Diya
+            else if (!Path.GetDirectoryName(eSign.FullName).Contains("diya", StringComparison.OrdinalIgnoreCase)) // Some dummy validation specific for Diya
             {
                 //throw new InvalidOperationException("INN should be stored in folder 'diya'");
                 Console.WriteLine("InvalidOperationException with 'INN should be stored in folder 'diya'' message.");

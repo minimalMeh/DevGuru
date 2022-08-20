@@ -1,10 +1,6 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using DevGuru.Core.Flyweight;
-using DevGuru.Core.Flyweight.Constants;
-using DevGuru.Core.Strategy;
-using DevGuru.Core.Strategy.Concrete;
+﻿using System.IO;
+using DevGuru.Core.State;
+using DevGuru.Core.State.Levels;
 using DevGuru.Core.TemplateMethod;
 
 namespace DevGuru
@@ -13,13 +9,36 @@ namespace DevGuru
     {
         public static void Main(string [] args)
         {
-            //TemplateMethod
-            var passport = new FileInfo("diya\\passport.txt");
-            var inn = new FileInfo("inn.txt");
-            var eSign = new FileInfo("diya\\key.dat");
-            EntrepreneurClient.SendRequestToBeEntrepreneur(new DiyaEntrepreneurService(), passport, inn, eSign);
-            EntrepreneurClient.SendRequestToBeEntrepreneur(new NotaryEnrepreneurService(), passport, inn, eSign);
+            // State
+            var context = new Curriculum(new BegginerLevel(), "Math");
+            context.ShowPreparationInstruction();
+            context.ShowRequiredExams();
+            if (context.Exam())
+            {
+                context.TransitionTo(new IntermediateLevel());
+                context.ShowPreparationInstruction();
+                context.ShowRequiredExams();
+                if (context.Exam())
+                {
+                    context.TransitionTo(new AdvancedLevel());
+                    context.ShowPreparationInstruction();
+                    context.ShowRequiredExams();
+                }
+            }
 
+            context = new Curriculum(new IntermediateLevel(), "Chemistry");
+            context.ShowRequiredExams();
+            if (context.Exam())
+            {
+                context.TransitionTo(new AdvancedLevel());
+            }
+
+            // TemplateMethod
+            //var passport = new FileInfo("diya\\passport.txt");
+            //var inn = new FileInfo("inn.txt");
+            //var eSign = new FileInfo("diya\\key.dat");
+            //EntrepreneurClient.SendRequestToBeEntrepreneur(new DiyaEntrepreneurService(), passport, inn, eSign);
+            //EntrepreneurClient.SendRequestToBeEntrepreneur(new NotaryEnrepreneurService(), passport, inn);
 
             // Strategy
             //int [] array = { 1, 2, 3, 12, 312, 312, 12, 2, 3, 34, 5, 35, 2, 3, 24, 23, 31, 24, 235, 346, 4, 2, 3, 4 };

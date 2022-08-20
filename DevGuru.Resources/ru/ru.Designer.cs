@@ -115,6 +115,44 @@ namespace DevGuru.Resources.ru {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Контекст хранит ссылку на объект состояния и делегирует ему часть работы, зависящей от состояний. Контекст работает с этим объектом через общий интерфейс состояний. Контекст должен иметь метод для присваивания ему нового объекта-состояния..
+        /// </summary>
+        internal static string State_Step1 {
+            get {
+                return ResourceManager.GetString("State_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Состояние описывает общий интерфейс для всех конкретных состояний..
+        /// </summary>
+        internal static string State_Step2 {
+            get {
+                return ResourceManager.GetString("State_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретные состояния реализуют поведения, связанные с определённым состоянием контекста. Иногда приходится создавать целые иерархии классов состояний, чтобы обобщить дублирующий код.
+        ///
+        ///Состояние может иметь обратную ссылку на объект контекста. Через неё не только удобно получать из контекста нужную информацию, но и осуществлять смену его состояния..
+        /// </summary>
+        internal static string State_Step3 {
+            get {
+                return ResourceManager.GetString("State_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to И контекст, и объекты конкретных состояний могут решать, когда и какое следующее состояние будет выбрано. Чтобы переключить состояние, нужно подать другой объект-состояние в контекст..
+        /// </summary>
+        internal static string State_Step4 {
+            get {
+                return ResourceManager.GetString("State_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Контекст хранит ссылку на объект конкретной стратегии, работая с ним через общий интерфейс стратегий..
         /// </summary>
         internal static string Strategy_Step1 {
