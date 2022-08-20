@@ -1,9 +1,11 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using DevGuru.Core.Flyweight;
 using DevGuru.Core.Flyweight.Constants;
 using DevGuru.Core.Strategy;
 using DevGuru.Core.Strategy.Concrete;
+using DevGuru.Core.TemplateMethod;
 
 namespace DevGuru
 {
@@ -11,29 +13,39 @@ namespace DevGuru
     {
         public static void Main(string [] args)
         {
-            int [] array = { 1, 2, 3, 12, 312, 312, 12, 2, 3, 34, 5, 35, 2, 3, 24, 23, 31, 24, 235, 346, 4, 2, 3, 4 };
-            string [] array2 = { "lox", "LAH", "HAHAHAH", "SASAT" , "d", "manchester", "no", "yes" , "dasha" };
-            char [] array3 = { 'd', 'a', '2' , 'l', 'G', 'A', 'U', 'u' };
+            //TemplateMethod
+            var passport = new FileInfo("diya\\passport.txt");
+            var inn = new FileInfo("inn.txt");
+            var eSign = new FileInfo("diya\\key.dat");
+            EntrepreneurClient.SendRequestToBeEntrepreneur(new DiyaEntrepreneurService(), passport, inn, eSign);
+            EntrepreneurClient.SendRequestToBeEntrepreneur(new NotaryEnrepreneurService(), passport, inn, eSign);
 
-            var intSortMachine = new SortMachine<int>();
-            var stringSortMachine = new SortMachine<string>();
-            var charSortMachine = new SortMachine<char>();
 
-            intSortMachine.SetStrategy(new BubbleSort<int>());
-            stringSortMachine.SetStrategy(new SelectionSort<string>());
+            // Strategy
+            //int [] array = { 1, 2, 3, 12, 312, 312, 12, 2, 3, 34, 5, 35, 2, 3, 24, 23, 31, 24, 235, 346, 4, 2, 3, 4 };
+            //string [] array2 = { "lox", "LAH", "HAHAHAH", "SASAT" , "d", "manchester", "no", "yes" , "dasha" };
+            //char [] array3 = { 'd', 'a', '2' , 'l', 'G', 'A', 'U', 'u' };
 
-            intSortMachine.Sort(array);
-            stringSortMachine.Sort(array2);
+            //var intSortMachine = new SortMachine<int>();
+            //var stringSortMachine = new SortMachine<string>();
+            //var charSortMachine = new SortMachine<char>();
 
-            intSortMachine.SetStrategy(new SelectionSort<int>());
-            stringSortMachine.SetStrategy(new BubbleSort<string>());
+            //intSortMachine.SetStrategy(new BubbleSort<int>());
+            //stringSortMachine.SetStrategy(new SelectionSort<string>());
 
-            intSortMachine.Sort(array);
-            stringSortMachine.Sort(array2);
+            //intSortMachine.Sort(array);
+            //stringSortMachine.Sort(array2);
 
-            charSortMachine.SetStrategy(new BubbleSort<char>());
-            charSortMachine.Sort(array3);
+            //intSortMachine.SetStrategy(new SelectionSort<int>());
+            //stringSortMachine.SetStrategy(new BubbleSort<string>());
 
+            //intSortMachine.Sort(array);
+            //stringSortMachine.Sort(array2);
+
+            //charSortMachine.SetStrategy(new BubbleSort<char>());
+            //charSortMachine.Sort(array3);
+
+            // FlyWeight
             //var location = new Location();
 
             //location.BuildHouse(0, 0, HouseLayoutType._1_201_6);

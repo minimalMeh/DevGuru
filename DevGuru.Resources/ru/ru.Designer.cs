@@ -160,5 +160,23 @@ namespace DevGuru.Resources.ru {
                 return ResourceManager.GetString("Strategy_Step5", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Абстрактный класс определяет шаги алгоритма и содержит шаблонный метод, состоящий из вызовов этих шагов. Шаги могут быть как абстрактными, так и содержать реализацию по умолчанию..
+        /// </summary>
+        internal static string TemplateMehod_Step1 {
+            get {
+                return ResourceManager.GetString("TemplateMehod_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретный класс переопределяет некоторые (или все) шаги алгоритма. Конкретные классы не переопределяют сам шаблонный метод..
+        /// </summary>
+        internal static string TemplateMethod_Step2 {
+            get {
+                return ResourceManager.GetString("TemplateMethod_Step2", resourceCulture);
+            }
+        }
     }
 }
