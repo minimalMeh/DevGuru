@@ -61,6 +61,51 @@ namespace DevGuru.Resources.ru {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Клиент — это класс, который содержит существующую бизнес-логику программы..
+        /// </summary>
+        internal static string Adapter_Step1 {
+            get {
+                return ResourceManager.GetString("Adapter_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клиентский интерфейс описывает протокол, через который клиент может работать с другими классами..
+        /// </summary>
+        internal static string Adapter_Step2 {
+            get {
+                return ResourceManager.GetString("Adapter_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сервис — это какой-то полезный класс, обычно сторонний. Клиент не может использовать этот класс напрямую, так как сервис имеет непонятный ему интерфейс..
+        /// </summary>
+        internal static string Adapter_Step3 {
+            get {
+                return ResourceManager.GetString("Adapter_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Адаптер — это класс, который может одновременно работать и с клиентом, и с сервисом. Он реализует клиентский интерфейс и содержит ссылку на объект сервиса. Адаптер получает вызовы от клиента через методы клиентского интерфейса, а затем переводит их в вызовы методов обёрнутого объекта в правильном формате..
+        /// </summary>
+        internal static string Adapter_Step4 {
+            get {
+                return ResourceManager.GetString("Adapter_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Работая с адаптером через интерфейс, клиент не привязывается к конкретному классу адаптера. Благодаря этому, вы можете добавлять в программу новые виды адаптеров, независимо от клиентского кода. Это может пригодиться, если интерфейс сервиса вдруг изменится, например, после выхода новой версии сторонней библиотеки..
+        /// </summary>
+        internal static string Adapter_Step5 {
+            get {
+                return ResourceManager.GetString("Adapter_Step5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Легковес применяется в программе, имеющей громадное количество одинаковых объектов. Этих объектов должно быть так много, чтобы они не помещались в доступную оперативную память без ухищрений. Паттерн разделяет данные этих объектов на две части — легковесы и контексты..
         /// </summary>
         internal static string Flyweight_Step1 {

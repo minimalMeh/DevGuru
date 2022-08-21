@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using DevGuru.Core.Adapter;
 using DevGuru.Core.State;
 using DevGuru.Core.State.Levels;
 using DevGuru.Core.TemplateMethod;
@@ -9,29 +10,34 @@ namespace DevGuru
     {
         public static void Main(string [] args)
         {
-            // State
-            var context = new Curriculum(new BegginerLevel(), "Math");
-            context.ShowPreparationInstruction();
-            context.ShowRequiredExams();
-            if (context.Exam())
-            {
-                context.TransitionTo(new IntermediateLevel());
-                context.ShowPreparationInstruction();
-                context.ShowRequiredExams();
-                if (context.Exam())
-                {
-                    context.TransitionTo(new AdvancedLevel());
-                    context.ShowPreparationInstruction();
-                    context.ShowRequiredExams();
-                }
-            }
+            // Adapter
+            IDiagnosisService adapter = new DiagnosisService(new LegacyXRayService("Back"));
+            adapter.Print();
 
-            context = new Curriculum(new IntermediateLevel(), "Chemistry");
-            context.ShowRequiredExams();
-            if (context.Exam())
-            {
-                context.TransitionTo(new AdvancedLevel());
-            }
+
+            // State
+            //var context = new Curriculum(new BegginerLevel(), "Math");
+            //context.ShowPreparationInstruction();
+            //context.ShowRequiredExams();
+            //if (context.Exam())
+            //{
+            //    context.TransitionTo(new IntermediateLevel());
+            //    context.ShowPreparationInstruction();
+            //    context.ShowRequiredExams();
+            //    if (context.Exam())
+            //    {
+            //        context.TransitionTo(new AdvancedLevel());
+            //        context.ShowPreparationInstruction();
+            //        context.ShowRequiredExams();
+            //    }
+            //}
+
+            //context = new Curriculum(new IntermediateLevel(), "Chemistry");
+            //context.ShowRequiredExams();
+            //if (context.Exam())
+            //{
+            //    context.TransitionTo(new AdvancedLevel());
+            //}
 
             // TemplateMethod
             //var passport = new FileInfo("diya\\passport.txt");
