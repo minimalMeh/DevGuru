@@ -61,6 +61,51 @@ namespace DevGuru.Resources.ua {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Абстрактні продукти оголошують інтерфейси продуктів, що пов’язані один з одним за змістом, але виконують різні функції..
+        /// </summary>
+        internal static string AbstractFactory_Step1 {
+            get {
+                return ResourceManager.GetString("AbstractFactory_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретні продукти — великий набір класів, що належать до різних абстрактних продуктів (крісло/столик), але мають одні й ті самі варіації (Вікторіанський/Модерн)..
+        /// </summary>
+        internal static string AbstractFactory_Step2 {
+            get {
+                return ResourceManager.GetString("AbstractFactory_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Абстрактна фабрика оголошує методи створення різних абстрактних продуктів (крісло/столик)..
+        /// </summary>
+        internal static string AbstractFactory_Step3 {
+            get {
+                return ResourceManager.GetString("AbstractFactory_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретні фабрики кожна належить до своєї варіації продуктів (Вікторіанський/Модерн) і реалізує методи абстрактної фабрики, даючи змогу створювати всі продукти певної варіації..
+        /// </summary>
+        internal static string AbstractFactory_Step4 {
+            get {
+                return ResourceManager.GetString("AbstractFactory_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Незважаючи на те, що конкретні фабрики породжують конкретні продукти, сигнатури їхніх методів мусять повертати відповідні абстрактні продукти. Це дозволить клієнтського коду, що використовує фабрику, не прив’язуватися до конкретних класів продуктів. Клієнт зможе працювати з будь-якими варіаціями продуктів через абстрактні інтерфейси..
+        /// </summary>
+        internal static string AbstractFactory_Step5 {
+            get {
+                return ResourceManager.GetString("AbstractFactory_Step5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Абстракція містить керуючу логіку. Код абстракції делегує реальну роботу пов’язаному об’єктові реалізації..
         /// </summary>
         internal static string Bridge_Step1 {

@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using DevGuru.Core.AbstractFactory;
 using DevGuru.Core.Adapter;
 using DevGuru.Core.Bridge;
 using DevGuru.Core.Bridge.Speakers;
@@ -12,15 +13,20 @@ namespace DevGuru
     {
         public static void Main(string [] args)
         {
+            // Abstract factory
+            GUIService.SimulateGUI("windows");
+            GUIService.SimulateGUI("goofy");
+            GUIService.SimulateGUI("mac");
+
             // Bridge
-            var control = new PhoneRemoteControl();
-            var speaker = new ConcertHallSpeaker();
-            speaker.PairDevice(control);
-            speaker.TurnOn();
-            speaker.TurnOff();
-            speaker.PairDevice(new ControlPanel("poroshenko"));
-            speaker.TurnOn();
-            speaker.TurnOff();
+            //var control = new PhoneRemoteControl();
+            //var speaker = new ConcertHallSpeaker();
+            //speaker.PairDevice(control);
+            //speaker.TurnOn();
+            //speaker.TurnOff();
+            //speaker.PairDevice(new ControlPanel("poroshenko"));
+            //speaker.TurnOn();
+            //speaker.TurnOff();
 
             // Adapter
             //IDiagnosisService adapter = new DiagnosisService(new LegacyXRayService("Back"));

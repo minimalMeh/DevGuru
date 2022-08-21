@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AbstractFactory_Step1" xml:space="preserve">
+    <value>Абстрактні продукти оголошують інтерфейси продуктів, що пов’язані один з одним за змістом, але виконують різні функції.</value>
+  </data>
+  <data name="AbstractFactory_Step2" xml:space="preserve">
+    <value>Конкретні продукти — великий набір класів, що належать до різних абстрактних продуктів (крісло/столик), але мають одні й ті самі варіації (Вікторіанський/Модерн).</value>
+  </data>
+  <data name="AbstractFactory_Step3" xml:space="preserve">
+    <value>Абстрактна фабрика оголошує методи створення різних абстрактних продуктів (крісло/столик).</value>
+  </data>
+  <data name="AbstractFactory_Step4" xml:space="preserve">
+    <value>Конкретні фабрики кожна належить до своєї варіації продуктів (Вікторіанський/Модерн) і реалізує методи абстрактної фабрики, даючи змогу створювати всі продукти певної варіації.</value>
+  </data>
+  <data name="AbstractFactory_Step5" xml:space="preserve">
+    <value>Незважаючи на те, що конкретні фабрики породжують конкретні продукти, сигнатури їхніх методів мусять повертати відповідні абстрактні продукти. Це дозволить клієнтського коду, що використовує фабрику, не прив’язуватися до конкретних класів продуктів. Клієнт зможе працювати з будь-якими варіаціями продуктів через абстрактні інтерфейси.</value>
+  </data>
   <data name="Bridge_Step1" xml:space="preserve">
     <value>Абстракція містить керуючу логіку. Код абстракції делегує реальну роботу пов’язаному об’єктові реалізації.</value>
   </data>
