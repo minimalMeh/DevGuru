@@ -1,5 +1,7 @@
 ﻿using System.IO;
 using DevGuru.Core.Adapter;
+using DevGuru.Core.Bridge;
+using DevGuru.Core.Bridge.Speakers;
 using DevGuru.Core.State;
 using DevGuru.Core.State.Levels;
 using DevGuru.Core.TemplateMethod;
@@ -10,10 +12,19 @@ namespace DevGuru
     {
         public static void Main(string [] args)
         {
-            // Adapter
-            IDiagnosisService adapter = new DiagnosisService(new LegacyXRayService("Back"));
-            adapter.Print();
+            // Bridge
+            var control = new PhoneRemoteControl();
+            var speaker = new ConcertHallSpeaker();
+            speaker.PairDevice(control);
+            speaker.TurnOn();
+            speaker.TurnOff();
+            speaker.PairDevice(new ControlPanel("poroshenko"));
+            speaker.TurnOn();
+            speaker.TurnOff();
 
+            // Adapter
+            //IDiagnosisService adapter = new DiagnosisService(new LegacyXRayService("Back"));
+            //adapter.Print();
 
             // State
             //var context = new Curriculum(new BegginerLevel(), "Math");

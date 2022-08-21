@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="en\" />
-    <Folder Include="ua\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,12 +14,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ru.resx</DependentUpon>
     </Compile>
+    <Compile Update="ua\ua.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ua.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="ru\ru.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ua\ua.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ua.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
