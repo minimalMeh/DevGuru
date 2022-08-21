@@ -142,5 +142,47 @@ namespace DevGuru.Resources.ua {
                 return ResourceManager.GetString("Bridge_Step4", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Продукт визначає загальний інтерфейс об’єктів, які може створювати творець та його підкласи..
+        /// </summary>
+        internal static string FactoryMethod_Step1 {
+            get {
+                return ResourceManager.GetString("FactoryMethod_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретні продукти містять код різних продуктів. Продукти відрізнятимуться реалізацією, але інтерфейс у них буде спільним..
+        /// </summary>
+        internal static string FactoryMethod_Step2 {
+            get {
+                return ResourceManager.GetString("FactoryMethod_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Творець оголошує фабричний метод, який має повертати нові об’єкти продуктів. Важливо, щоб тип результату цього методу співпадав із загальним інтерфейсом продуктів.
+        ///
+        ///Зазвичай, фабричний метод оголошують абстрактним, щоб змусити всі підкласи реалізувати його по-своєму. Однак він може також повертати продукт за замовчуванням.
+        ///
+        ///Незважаючи на назву, важливо розуміти, що створення продуктів не є єдиною і головною функцією творця. Зазвичай він містить ще й інший корисний код для роботи з продуктом. Аналогія: у [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string FactoryMethod_Step3 {
+            get {
+                return ResourceManager.GetString("FactoryMethod_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретні творці по-своєму реалізують фабричний метод, виробляючи ті чи інші конкретні продукти.
+        ///
+        ///Фабричний метод не зобов’язаний створювати нові об’єкти увесь час. Його можна переписати так, аби повертати з якогось сховища або кешу вже існуючі об’єкти..
+        /// </summary>
+        internal static string FactoryMethod_Step4 {
+            get {
+                return ResourceManager.GetString("FactoryMethod_Step4", resourceCulture);
+            }
+        }
     }
 }

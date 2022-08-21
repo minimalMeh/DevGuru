@@ -3,6 +3,7 @@ using DevGuru.Core.AbstractFactory;
 using DevGuru.Core.Adapter;
 using DevGuru.Core.Bridge;
 using DevGuru.Core.Bridge.Speakers;
+using DevGuru.Core.FactoryMethod;
 using DevGuru.Core.State;
 using DevGuru.Core.State.Levels;
 using DevGuru.Core.TemplateMethod;
@@ -13,10 +14,17 @@ namespace DevGuru
     {
         public static void Main(string [] args)
         {
+            // Factory method
+            var dialogService = new DialogService();
+            dialogService.Initialize("windows");
+            dialogService.Render();
+            dialogService.Initialize("web");
+            dialogService.Render();
+
             // Abstract factory
-            GUIService.SimulateGUI("windows");
-            GUIService.SimulateGUI("goofy");
-            GUIService.SimulateGUI("mac");
+            //GUIService.SimulateGUI("windows");
+            //GUIService.SimulateGUI("goofy");
+            //GUIService.SimulateGUI("mac");
 
             // Bridge
             //var control = new PhoneRemoteControl();
