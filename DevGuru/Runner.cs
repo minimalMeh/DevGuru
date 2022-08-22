@@ -1,8 +1,10 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using DevGuru.Core.AbstractFactory;
 using DevGuru.Core.Adapter;
 using DevGuru.Core.Bridge;
 using DevGuru.Core.Bridge.Speakers;
+using DevGuru.Core.Builder;
 using DevGuru.Core.FactoryMethod;
 using DevGuru.Core.State;
 using DevGuru.Core.State.Levels;
@@ -14,12 +16,22 @@ namespace DevGuru
     {
         public static void Main(string [] args)
         {
+            // Builder
+            var bakery = new Bakery();
+            var crsntBuilder = new СroissantBuilder();
+            bakery.Bake(crsntBuilder);
+            Console.WriteLine(crsntBuilder.GetProduct().ToString());
+            var bgtBuilder = new BaguetteBuilder();
+            bakery.Bake(bgtBuilder);
+            Console.WriteLine(bgtBuilder.GetProduct().ToString()); 
+
+
             // Factory method
-            var dialogService = new DialogService();
-            dialogService.Initialize("windows");
-            dialogService.Render();
-            dialogService.Initialize("web");
-            dialogService.Render();
+            //var dialogService = new DialogService();
+            //dialogService.Initialize("windows");
+            //dialogService.Render();
+            //dialogService.Initialize("web");
+            //dialogService.Render();
 
             // Abstract factory
             //GUIService.SimulateGUI("windows");

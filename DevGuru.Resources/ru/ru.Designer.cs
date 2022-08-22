@@ -106,6 +106,51 @@ namespace DevGuru.Resources.ru {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Интерфейс строителя объявляет шаги конструирования продуктов, общие для всех видов строителей..
+        /// </summary>
+        internal static string Builder_Step1 {
+            get {
+                return ResourceManager.GetString("Builder_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретные строители реализуют строительные шаги, каждый по-своему. Конкретные строители могут производить разнородные объекты, не имеющие общего интерфейса..
+        /// </summary>
+        internal static string Builder_Step2 {
+            get {
+                return ResourceManager.GetString("Builder_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Продукт — создаваемый объект. Продукты, сделанные разными строителями, не обязаны иметь общий интерфейс..
+        /// </summary>
+        internal static string Builder_Step3 {
+            get {
+                return ResourceManager.GetString("Builder_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Директор определяет порядок вызова строительных шагов для производства той или иной конфигурации продуктов..
+        /// </summary>
+        internal static string Builder_Step4 {
+            get {
+                return ResourceManager.GetString("Builder_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обычно Клиент подаёт в конструктор директора уже готовый объект-строитель, и в дальнейшем данный директор использует только его. Но возможен и другой вариант, когда клиент передаёт строителя через параметр строительного метода директора. В этом случае можно каждый раз применять разных строителей для производства различных представлений объектов..
+        /// </summary>
+        internal static string Builder_Step5 {
+            get {
+                return ResourceManager.GetString("Builder_Step5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Легковес применяется в программе, имеющей громадное количество одинаковых объектов. Этих объектов должно быть так много, чтобы они не помещались в доступную оперативную память без ухищрений. Паттерн разделяет данные этих объектов на две части — легковесы и контексты..
         /// </summary>
         internal static string Flyweight_Step1 {
