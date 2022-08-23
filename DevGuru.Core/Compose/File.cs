@@ -3,16 +3,13 @@
     public class File : IFileSystemNode
     {
         private readonly int size;
-        private readonly Folder parent;
 
         public string Name { get; private set; }
-        public string Path { get => $"{parent.Path}\\{Name}"; }
 
-        public File(string name, int size, Folder parent)
+        public File(string name, int size)
         {
             Name = name;
             this.size = size;
-            this.parent = parent;
         }
 
         public int GetSize() => size;

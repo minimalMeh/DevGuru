@@ -5,15 +5,12 @@ namespace DevGuru.Core.Compose
     public class Folder : IFileSystemNode
     {
         private readonly List<IFileSystemNode> children = new List<IFileSystemNode>();
-        private readonly Folder parent = null;
 
         public string Name { get; }
-        public string Path { get => $"{(parent == null ? Name + ":" : parent.Path + "\\" + Name)}"; }
 
-        public Folder(string name, Folder parent)
+        public Folder(string name)
         {
             Name = name;
-            this.parent = parent;
         }
 
         public void Add(IFileSystemNode node)
