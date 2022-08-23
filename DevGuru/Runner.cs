@@ -5,10 +5,12 @@ using DevGuru.Core.Adapter;
 using DevGuru.Core.Bridge;
 using DevGuru.Core.Bridge.Speakers;
 using DevGuru.Core.Builder;
+using DevGuru.Core.Compose;
 using DevGuru.Core.FactoryMethod;
 using DevGuru.Core.State;
 using DevGuru.Core.State.Levels;
 using DevGuru.Core.TemplateMethod;
+using File = DevGuru.Core.Compose.File;
 
 namespace DevGuru
 {
@@ -16,14 +18,24 @@ namespace DevGuru
     {
         public static void Main(string [] args)
         {
+            // Compose
+
+            var rootFolder = new Folder("Disk C", null);
+            var folderA = new Folder("Alpha", rootFolder);
+            var fileA = new File("Apartments.doc", 124, folderA);
+            var folderB = new Folder("Beta", rootFolder);
+            var fileB1 = new File("Bike.img", 300, folderB);
+            var folderC = new Folder("Gamma", folderA);
+            Console.WriteLine(fileB1.Path);
+
             // Builder
-            var bakery = new Bakery();
-            var crsntBuilder = new СroissantBuilder();
-            bakery.Bake(crsntBuilder);
-            Console.WriteLine(crsntBuilder.GetProduct().ToString());
-            var bgtBuilder = new BaguetteBuilder();
-            bakery.Bake(bgtBuilder);
-            Console.WriteLine(bgtBuilder.GetProduct().ToString()); 
+            //var bakery = new Bakery();
+            //var crsntBuilder = new СroissantBuilder();
+            //bakery.Bake(crsntBuilder);
+            //Console.WriteLine(crsntBuilder.GetProduct().ToString());
+            //var bgtBuilder = new BaguetteBuilder();
+            //bakery.Bake(bgtBuilder);
+            //Console.WriteLine(bgtBuilder.GetProduct().ToString()); 
 
 
             // Factory method
