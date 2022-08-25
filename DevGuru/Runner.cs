@@ -19,21 +19,20 @@ namespace DevGuru
         public static void Main(string [] args)
         {
             // Compose
-
-            var compose = new FileSystem();
-            var root = new Folder("C:");
-            var folderA = new Folder("Alpha");
-            compose.Add(root, folderA);
-            var fileA = new File("Apartments.doc", 124);
-            compose.Add(folderA, fileA);
-            var folderB = new Folder("Beta");
-            compose.Add(root, folderB);
-            compose.Add(folderB, new File("Bye", 1064));
-            var fileB1 = new File("Bike.img", 300);
-            compose.Add(folderB, fileB1);
-            var fileR = new File("RootFile.db", 20000);
-            compose.Add(root, fileR);
-            Console.WriteLine(compose.GetSize(root));
+            //var compose = new FileSystem();
+            //var root = new Folder("C:");
+            //var folderA = new Folder("Alpha");
+            //compose.Add(root, folderA);
+            //var fileA = new File("Apartments.doc", 124);
+            //compose.Add(folderA, fileA);
+            //var folderB = new Folder("Beta");
+            //compose.Add(root, folderB);
+            //compose.Add(folderB, new File("Bye", 1064));
+            //var fileB1 = new File("Bike.img", 300);
+            //compose.Add(folderB, fileB1);
+            //var fileR = new File("RootFile.db", 20000);
+            //compose.Add(root, fileR);
+            //Console.WriteLine(compose.GetSize(root));
 
             // Builder
             //var bakery = new Bakery();

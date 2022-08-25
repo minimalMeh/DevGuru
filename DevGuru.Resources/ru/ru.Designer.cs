@@ -151,6 +151,48 @@ namespace DevGuru.Resources.ru {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Компонент определяет общий интерфейс для простых и составных компонентов дерева..
+        /// </summary>
+        internal static string Compose_Step1 {
+            get {
+                return ResourceManager.GetString("Compose_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Лист — это простой компонент дерева, не имеющий ответвлений.
+        ///
+        ///Из-за того, что им некому больше передавать выполнение, классы листьев будут содержать большую часть полезного кода..
+        /// </summary>
+        internal static string Compose_Step2 {
+            get {
+                return ResourceManager.GetString("Compose_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Контейнер (или композит) — это составной компонент дерева. Он содержит набор дочерних компонентов, но ничего не знает об их типах. Это могут быть как простые компоненты-листья, так и другие компоненты-контейнеры. Но это не является проблемой, если все дочерние компоненты следуют единому интерфейсу.
+        ///
+        ///Методы контейнера переадресуют основную работу своим дочерним компонентам, хотя и могут добавлять что-то своё к результату..
+        /// </summary>
+        internal static string Compose_Step3 {
+            get {
+                return ResourceManager.GetString("Compose_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клиент работает с деревом через общий интерфейс компонентов.
+        ///
+        ///Благодаря этому, клиенту не важно, что перед ним находится — простой или составной компонент дерева..
+        /// </summary>
+        internal static string Compose_Step4 {
+            get {
+                return ResourceManager.GetString("Compose_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Легковес применяется в программе, имеющей громадное количество одинаковых объектов. Этих объектов должно быть так много, чтобы они не помещались в доступную оперативную память без ухищрений. Паттерн разделяет данные этих объектов на две части — легковесы и контексты..
         /// </summary>
         internal static string Flyweight_Step1 {
