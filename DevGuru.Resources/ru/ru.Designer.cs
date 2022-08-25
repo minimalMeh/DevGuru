@@ -193,6 +193,35 @@ namespace DevGuru.Resources.ru {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Фасад предоставляет быстрый доступ к определённой функциональности подсистемы. Он «знает», каким классам нужно переадресовать запрос, и какие данные для этого нужны..
+        /// </summary>
+        internal static string Facade_Step1 {
+            get {
+                return ResourceManager.GetString("Facade_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дополнительный фасад можно ввести, чтобы не «захламлять» единственный фасад разнородной функциональностью. Он может использоваться как клиентом, так и другими фасадами..
+        /// </summary>
+        internal static string Facade_Step2 {
+            get {
+                return ResourceManager.GetString("Facade_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сложная подсистема состоит из множества разнообразных классов. Для того, чтобы заставить их что-то делать, нужно знать подробности устройства подсистемы, порядок инициализации объектов и так далее.
+        ///
+        ///Классы подсистемы не знают о существовании фасада и работают друг с другом напрямую..
+        /// </summary>
+        internal static string Facade_Step3 {
+            get {
+                return ResourceManager.GetString("Facade_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Легковес применяется в программе, имеющей громадное количество одинаковых объектов. Этих объектов должно быть так много, чтобы они не помещались в доступную оперативную память без ухищрений. Паттерн разделяет данные этих объектов на две части — легковесы и контексты..
         /// </summary>
         internal static string Flyweight_Step1 {

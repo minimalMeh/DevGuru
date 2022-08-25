@@ -6,6 +6,7 @@ using DevGuru.Core.Bridge;
 using DevGuru.Core.Bridge.Speakers;
 using DevGuru.Core.Builder;
 using DevGuru.Core.Compose;
+using DevGuru.Core.Facade;
 using DevGuru.Core.FactoryMethod;
 using DevGuru.Core.Observer.Classic;
 using DevGuru.Core.Observer.Classic.Subscribers;
@@ -21,27 +22,29 @@ namespace DevGuru
     {
         public static void Main(string [] args)
         {
-            // Observer not C# sample, just observer
+            // Facade
+            Client.Operation(new Facade(new Subsystem1(), new Subsystem2()));
 
-            var ib = new InternetBilet();
-            var ba = new BusinessAffiche();
-            var tu = new TechnicalUniversity();
-            var rs = new RobotsSchool();
+            // Observer not C# sample, just observer, TODO: adequate c# event 
+            //var ib = new InternetBilet();
+            //var ba = new BusinessAffiche();
+            //var tu = new TechnicalUniversity();
+            //var rs = new RobotsSchool();
 
-            var eventMan = new EventManager();
-            eventMan.AttachAllEventsListener(ib);
-            eventMan.AttachBusinessListener(ba);
-            eventMan.AttachSienceListener(tu);
-            eventMan.AttachSienceListener(rs);
+            //var eventMan = new EventManager();
+            //eventMan.AttachAllEventsListener(ib);
+            //eventMan.AttachBusinessListener(ba);
+            //eventMan.AttachSienceListener(tu);
+            //eventMan.AttachSienceListener(rs);
 
-            eventMan.AddBusinessEnvent(new BusinessEvent(DateTime.UtcNow, DateTime.UtcNow));
-            eventMan.AddSienceEnvent(new SienceEvent(DateTime.UtcNow, "Park Gorkogo"));
-            eventMan.AddSienceEnvent(new SienceEvent(DateTime.UtcNow, "Jellyfish museum"));
+            //eventMan.AddBusinessEnvent(new BusinessEvent(DateTime.UtcNow, DateTime.UtcNow));
+            //eventMan.AddSienceEnvent(new SienceEvent(DateTime.UtcNow, "Park Gorkogo"));
+            //eventMan.AddSienceEnvent(new SienceEvent(DateTime.UtcNow, "Jellyfish museum"));
 
-            ib.Print();
-            ba.Print();
-            tu.Print();
-            rs.Print();
+            //ib.Print();
+            //ba.Print();
+            //tu.Print();
+            //rs.Print();
 
             // Compose
             //var compose = new FileSystem();
