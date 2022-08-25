@@ -104,5 +104,14 @@ namespace DevGuru.Resources.en {
                 return ResourceManager.GetString("Observer_Step5", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Client creates publisher and subscriber objects separately and then registers subscribers for publisher updates..
+        /// </summary>
+        internal static string Observer_Step6 {
+            get {
+                return ResourceManager.GetString("Observer_Step6", resourceCulture);
+            }
+        }
     }
 }

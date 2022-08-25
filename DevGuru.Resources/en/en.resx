@@ -132,4 +132,7 @@
   <data name="Observer_Step5" xml:space="preserve">
     <value>The Client creates publisher and subscriber objects separately and then registers subscribers for publisher updates.</value>
   </data>
+  <data name="Observer_Step6" xml:space="preserve">
+    <value>The Client creates publisher and subscriber objects separately and then registers subscribers for publisher updates.</value>
+  </data>
 </root>
