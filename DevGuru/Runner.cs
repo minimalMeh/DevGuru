@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 using DevGuru.Core.AbstractFactory;
 using DevGuru.Core.Adapter;
 using DevGuru.Core.Bridge;
@@ -8,6 +9,7 @@ using DevGuru.Core.Builder;
 using DevGuru.Core.Compose;
 using DevGuru.Core.Facade;
 using DevGuru.Core.FactoryMethod;
+using DevGuru.Core.Mediator;
 using DevGuru.Core.Observer.Classic;
 using DevGuru.Core.Observer.Classic.Subscribers;
 using DevGuru.Core.Observer.Models;
@@ -22,8 +24,19 @@ namespace DevGuru
     {
         public static void Main(string [] args)
         {
+            // Mediator
+            var manager = new ManagerMediator();
+            var executor = new SubordinateColleague(manager);
+            var customer = new CustomerColleague(manager);
+            manager.Customer = customer;
+            manager.Executor = executor;
+
+            customer.Send("I want a new release");
+            Thread.Sleep(1000);
+            executor.Send("Here is a new release");
+
             // Facade
-            Client.Operation(new Facade(new Subsystem1(), new Subsystem2()));
+            //Client.Operation(new Facade(new Subsystem1(), new Subsystem2()));
 
             // Observer not C# sample, just observer, TODO: adequate c# event 
             //var ib = new InternetBilet();

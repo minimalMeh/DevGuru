@@ -184,5 +184,41 @@ namespace DevGuru.Resources.ua {
                 return ResourceManager.GetString("FactoryMethod_Step4", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Компоненти — це різнорідні об’єкти, що містять бізнес-логіку програми. Кожен компонент має посилання на об’єкт посередника, але працює з ним тільки через абстрактний інтерфейс посередників. Завдяки цьому компоненти можна повторно використовувати в інших програмах, зв’язавши їх з посередником іншого типу..
+        /// </summary>
+        internal static string Mediator_Step1 {
+            get {
+                return ResourceManager.GetString("Mediator_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Посередник визначає інтерфейс для обміну інформацією з компонентами. Зазвичай достатньо одного методу, щоби повідомляти посередника про події, що відбулися в компонентах. У параметрах цього методу можна передавати деталі події: посилання на компонент, в якому вона відбулася, та будь-які інші дані..
+        /// </summary>
+        internal static string Mediator_Step2 {
+            get {
+                return ResourceManager.GetString("Mediator_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретний посередник містить код взаємодії кількох компонентів між собою. Найчастіше цей об’єкт не тільки зберігає посилання на всі свої компоненти, але й сам їх створює, керуючи подальшим життєвим циклом..
+        /// </summary>
+        internal static string Mediator_Step3 {
+            get {
+                return ResourceManager.GetString("Mediator_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Компоненти не повинні спілкуватися один з одним безпосередньо. Якщо в компоненті відбувається важлива подія, він повинен повідомити свого посередника, а той сам вирішить, чи стосується подія інших компонентів, і чи треба їх сповістити. При цьому компонент-відправник не знає, хто обробить його запит, а компонент-одержувач не знає, хто його надіслав..
+        /// </summary>
+        internal static string Mediator_Step4 {
+            get {
+                return ResourceManager.GetString("Mediator_Step4", resourceCulture);
+            }
+        }
     }
 }
