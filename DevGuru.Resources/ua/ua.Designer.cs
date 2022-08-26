@@ -144,6 +144,46 @@ namespace DevGuru.Resources.ua {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Обробник визначає спільний для всіх конкретних обробників інтерфейс. Зазвичай достатньо описати один метод обробки запитів, але іноді тут може бути оголошений і метод встановлення наступного обробника..
+        /// </summary>
+        internal static string ChainOfResponsibility_Step1 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibility_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Базовий обробник — опціональний клас, який дає змогу позбутися дублювання одного і того самого коду в усіх конкретних обробниках.
+        ///
+        ///Зазвичай цей клас має поле для зберігання посилання на наступного обробника у ланцюжку. Клієнт зв’язує обробників у ланцюг, подаючи посилання на наступного обробника через конструктор або сетер поля. Також в цьому класі можна реалізувати базовий метод обробки, який би просто перенаправляв запити наступному обробнику, перевіривши його наявність..
+        /// </summary>
+        internal static string ChainOfResponsibility_Step2 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibility_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретні обробники містять код обробки запитів. При отриманні запиту кожен обробник вирішує, чи може він обробити запит, а також чи варто передати його наступному об’єкту.
+        ///
+        ///У більшості випадків обробники можуть працювати самостійно і бути незмінними, отримавши всі необхідні деталі через параметри конструктора..
+        /// </summary>
+        internal static string ChainOfResponsibility_Step3 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibility_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клієнт може сформувати ланцюжок лише один раз і використовувати його протягом всього часу роботи програми, так і перебудовувати його динамічно, залежно від логіки програми. Клієнт може відправляти запити будь-якому об’єкту ланцюжка, не обов’язково першому з них..
+        /// </summary>
+        internal static string ChainOfResponsibility_Step4 {
+            get {
+                return ResourceManager.GetString("ChainOfResponsibility_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Відправник зберігає посилання на об’єкт команди та звертається до нього, коли потрібно виконати якусь дію. Відправник працює з командами тільки через їхній загальний інтерфейс. Він не знає, яку конкретно команду використовує, оскільки отримує готовий об’єкт команди від клієнта..
         /// </summary>
         internal static string Command_Step1 {

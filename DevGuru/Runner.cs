@@ -6,6 +6,7 @@ using DevGuru.Core.Adapter;
 using DevGuru.Core.Bridge;
 using DevGuru.Core.Bridge.Speakers;
 using DevGuru.Core.Builder;
+using DevGuru.Core.ChainOfResponsibility;
 using DevGuru.Core.Command;
 using DevGuru.Core.Compose;
 using DevGuru.Core.Facade;
@@ -25,6 +26,17 @@ namespace DevGuru
     {
         public static void Main(string [] args)
         {
+            // Chain of responsibility
+            //var user1 = new User(false, true, true);
+            //var user2 = new User(true, true, true);
+            //var user3 = new User(false, false, true);
+
+            //var paymentService = new PaymentService();
+
+            //paymentService.ProceedPayment(user1);
+            //paymentService.ProceedPayment(user2);
+            //paymentService.ProceedPayment(user3);
+
             // Command
             //var tv = new TV();
             //var tvCommand = new TVPowerCommand(tv);
