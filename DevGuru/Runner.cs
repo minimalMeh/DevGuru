@@ -6,6 +6,7 @@ using DevGuru.Core.Adapter;
 using DevGuru.Core.Bridge;
 using DevGuru.Core.Bridge.Speakers;
 using DevGuru.Core.Builder;
+using DevGuru.Core.Command;
 using DevGuru.Core.Compose;
 using DevGuru.Core.Facade;
 using DevGuru.Core.FactoryMethod;
@@ -24,16 +25,23 @@ namespace DevGuru
     {
         public static void Main(string [] args)
         {
-            // Mediator
-            var manager = new ManagerMediator();
-            var executor = new SubordinateColleague(manager);
-            var customer = new CustomerColleague(manager);
-            manager.Customer = customer;
-            manager.Executor = executor;
+            // Command
+            //var tv = new TV();
+            //var tvCommand = new TVPowerCommand(tv);
+            //var remote = new TVRemote(tvCommand);
+            //remote.TurnOnTV();
+            //remote.TurnOffTV();
 
-            customer.Send("I want a new release");
-            Thread.Sleep(1000);
-            executor.Send("Here is a new release");
+            // Mediator
+            //var manager = new ManagerMediator();
+            //var executor = new SubordinateColleague(manager);
+            //var customer = new CustomerColleague(manager);
+            //manager.Customer = customer;
+            //manager.Executor = executor;
+
+            //customer.Send("I want a new release");
+            //Thread.Sleep(1000);
+            //executor.Send("Here is a new release");
 
             // Facade
             //Client.Operation(new Facade(new Subsystem1(), new Subsystem2()));

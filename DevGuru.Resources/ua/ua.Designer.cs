@@ -144,6 +144,53 @@ namespace DevGuru.Resources.ua {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Відправник зберігає посилання на об’єкт команди та звертається до нього, коли потрібно виконати якусь дію. Відправник працює з командами тільки через їхній загальний інтерфейс. Він не знає, яку конкретно команду використовує, оскільки отримує готовий об’єкт команди від клієнта..
+        /// </summary>
+        internal static string Command_Step1 {
+            get {
+                return ResourceManager.GetString("Command_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Команда описує інтерфейс, спільний для всіх конкретних команд. Зазвичай тут описується лише один метод запуску команди..
+        /// </summary>
+        internal static string Command_Step2 {
+            get {
+                return ResourceManager.GetString("Command_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретні команди реалізують різні запити, дотримуючись загального інтерфейсу команд. Як правило, команда не робить всю роботу самостійно, а лише передає виклик одержувачу, яким виступає один з об’єктів бізнес-логіки.
+        ///
+        ///Параметри, з якими команда звертається до одержувача, необхідно зберігати у вигляді полів. У більшості випадків об’єкти команд можна зробити незмінними, передаючи у них всі необхідні параметри тільки через конструктор..
+        /// </summary>
+        internal static string Command_Step3 {
+            get {
+                return ResourceManager.GetString("Command_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Одержувач містить бізнес-логіку програми. У цій ролі може виступати практично будь-який об’єкт. Зазвичай, команди перенаправляють виклики одержувачам, але іноді, щоб спростити програму, ви можете позбутися від одержувачів, «зливши» їхній код у класи команд..
+        /// </summary>
+        internal static string Command_Step4 {
+            get {
+                return ResourceManager.GetString("Command_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клієнт створює об’єкти конкретних команд, передаючи до них усі необхідні параметри, серед яких можуть бути і посилання на об’єкти одержувачів. Після цього клієнт зв’язує об’єкти відправників зі створеними командами..
+        /// </summary>
+        internal static string Command_Step5 {
+            get {
+                return ResourceManager.GetString("Command_Step5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Продукт визначає загальний інтерфейс об’єктів, які може створювати творець та його підкласи..
         /// </summary>
         internal static string FactoryMethod_Step1 {
