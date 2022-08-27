@@ -276,6 +276,89 @@ namespace DevGuru.Resources.ru {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Создатель может производить снимки своего состояния, а также воспроизводить прошлое состояние, если подать в него готовый снимок..
+        /// </summary>
+        internal static string Memento_Step1 {
+            get {
+                return ResourceManager.GetString("Memento_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Снимок — это простой объект данных, содержащий состояние создателя. Надёжнее всего сделать объекты снимков неизменяемыми, передавая в них состояние только через конструктор..
+        /// </summary>
+        internal static string Memento_Step2 {
+            get {
+                return ResourceManager.GetString("Memento_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Опекун должен знать, когда делать снимок создателя и когда его нужно восстанавливать.
+        ///
+        ///Опекун может хранить историю прошлых состояний создателя в виде стека из снимков. Когда понадобится отменить выполненную операцию, он возьмёт «верхний» снимок из стека и передаст его создателю для восстановления..
+        /// </summary>
+        internal static string Memento_Step3 {
+            get {
+                return ResourceManager.GetString("Memento_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В данной реализации снимок — это внутренний класс по отношению к классу создателя. Именно поэтому он имеет полный доступ к полям и методам создателя, даже приватным. С другой стороны, опекун не имеет доступа ни к состоянию, ни к методам снимков и может всего лишь хранить ссылки на эти объекты..
+        /// </summary>
+        internal static string Memento_Step4 {
+            get {
+                return ResourceManager.GetString("Memento_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В этой реализации создатель работает напрямую с конкретным классом снимка, а опекун — только с его ограниченным интерфейсом..
+        /// </summary>
+        internal static string Memento1_Step1 {
+            get {
+                return ResourceManager.GetString("Memento1_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Благодаря этому достигается тот же эффект, что и в классической реализации. Создатель имеет полный доступ к снимку, а опекун — нет..
+        /// </summary>
+        internal static string Memento1_Step2 {
+            get {
+                return ResourceManager.GetString("Memento1_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Эта реализация разрешает иметь несколько видов создателей и снимков. Каждому классу создателей соответствует свой класс снимков. Ни создатели, ни снимки не позволяют другим объектам прочесть своё состояние..
+        /// </summary>
+        internal static string Memento2_Step1 {
+            get {
+                return ResourceManager.GetString("Memento2_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Здесь опекун ещё более жёстко ограничен в доступе к состоянию создателей и снимков. Но, с другой стороны, опекун становится независим от создателей, поскольку метод восстановления теперь находится в самих снимках..
+        /// </summary>
+        internal static string Memento2_Step2 {
+            get {
+                return ResourceManager.GetString("Memento2_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Снимки теперь связаны с теми создателями, из которых они сделаны. Они по-прежнему получают состояние через конструктор. Благодаря близкой связи между классами, снимки знают, как восстановить состояние своих создателей..
+        /// </summary>
+        internal static string Memento2_Step3 {
+            get {
+                return ResourceManager.GetString("Memento2_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Контекст хранит ссылку на объект состояния и делегирует ему часть работы, зависящей от состояний. Контекст работает с этим объектом через общий интерфейс состояний. Контекст должен иметь метод для присваивания ему нового объекта-состояния..
         /// </summary>
         internal static string State_Step1 {
