@@ -8,7 +8,7 @@ namespace DevGuru.Core.Proxy
     public class YouTubeCacheProxy : IYouTubeLibrary
     {
         private readonly Lazy<ThirdPartyYouTube> youTubeLazy = new Lazy<ThirdPartyYouTube>();
-        private ThirdPartyYouTube YouTubeLib { get => youTubeLazy.Value; }
+        private ThirdPartyYouTube YouTubeLib => youTubeLazy.Value;
 
         private readonly Dictionary<string, Video> cacheAllVideos = new Dictionary<string, Video>();
         private Dictionary<string, Video> cachePopularVideos = new Dictionary<string, Video>();
@@ -23,7 +23,7 @@ namespace DevGuru.Core.Proxy
             }
             else
             {
-                Console.WriteLine(CACHE_MASK +"Retrieved popular from cache.");
+                Console.WriteLine(CACHE_MASK + "Retrieved popular from cache.");
             }
 
             return cachePopularVideos;

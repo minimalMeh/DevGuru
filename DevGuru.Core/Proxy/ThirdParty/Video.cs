@@ -11,8 +11,8 @@ namespace DevGuru.Core.Proxy.ThirdParty
 
         public string Title { get; }
 
-        public string Data { get; } //immitation of byte array of the video
-        
+        public string Data { get; } // imitation of byte array of the video
+
         public Video(string id, string title)
         {
             Id = id;

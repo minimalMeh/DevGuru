@@ -193,6 +193,51 @@ namespace DevGuru.Resources.ru {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Компонент задаёт общий интерфейс обёрток и оборачиваемых объектов..
+        /// </summary>
+        internal static string Decorator_Step1 {
+            get {
+                return ResourceManager.GetString("Decorator_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретный компонент определяет класс оборачиваемых объектов. Он содержит какое-то базовое поведение, которое потом изменяют декораторы..
+        /// </summary>
+        internal static string Decorator_Step2 {
+            get {
+                return ResourceManager.GetString("Decorator_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Базовый декоратор хранит ссылку на вложенный объект-компонент. Им может быть как конкретный компонент, так и один из конкретных декораторов. Базовый декоратор делегирует все свои операции вложенному объекту. Дополнительное поведение будет жить в конкретных декораторах..
+        /// </summary>
+        internal static string Decorator_Step3 {
+            get {
+                return ResourceManager.GetString("Decorator_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретные декораторы — это различные вариации декораторов, которые содержат добавочное поведение. Оно выполняется до или после вызова аналогичного поведения обёрнутого объекта..
+        /// </summary>
+        internal static string Decorator_Step4 {
+            get {
+                return ResourceManager.GetString("Decorator_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клиент может оборачивать простые компоненты и декораторы в другие декораторы, работая со всеми объектами через общий интерфейс компонентов..
+        /// </summary>
+        internal static string Decorator_Step5 {
+            get {
+                return ResourceManager.GetString("Decorator_Step5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Фасад предоставляет быстрый доступ к определённой функциональности подсистемы. Он «знает», каким классам нужно переадресовать запрос, и какие данные для этого нужны..
         /// </summary>
         internal static string Facade_Step1 {
