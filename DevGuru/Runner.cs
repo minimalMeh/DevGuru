@@ -10,6 +10,7 @@ using DevGuru.Core.Builder;
 using DevGuru.Core.ChainOfResponsibility;
 using DevGuru.Core.Command;
 using DevGuru.Core.Compose;
+using DevGuru.Core.Decorator;
 using DevGuru.Core.Facade;
 using DevGuru.Core.FactoryMethod;
 using DevGuru.Core.Mediator;
@@ -29,34 +30,45 @@ namespace DevGuru
     {
         public static void Main(string[] args)
         {
+            // Decorator
+            string salary = "Name, Salary\nJohn, 1000\nLida, 2000\n";
+            DataSourceDecorator withEncryption = new EncryptionDecorator(
+                new FileDataSource("test.txt"));
+
+            withEncryption.Write(salary);
+
+            var plainFileDataSource = new FileDataSource("test.txt");
+            Console.WriteLine("Plain file read: \n" + plainFileDataSource.Read());
+            Console.WriteLine("Decorator file read: \n" + withEncryption.Read());
+
             // Proxy
-            var proxy = new YouTubeCacheProxy();
-            proxy.GetPopularVideos().Values.ToList().ForEach(p => Console.WriteLine(p));
-            proxy.GetPopularVideos().Values.ToList().ForEach(p => Console.WriteLine(p));
-            proxy.GetPopularVideos().Values.ToList().ForEach(p => Console.WriteLine(p));
+            //var proxy = new YouTubeCacheProxy();
+            //proxy.GetPopularVideos().Values.ToList().ForEach(p => Console.WriteLine(p));
+            //proxy.GetPopularVideos().Values.ToList().ForEach(p => Console.WriteLine(p));
+            //proxy.GetPopularVideos().Values.ToList().ForEach(p => Console.WriteLine(p));
 
-            var video = proxy.GetVideo("turtle");
-            Console.WriteLine(video);
+            //var video = proxy.GetVideo("turtle");
+            //Console.WriteLine(video);
 
-            video = proxy.GetVideo("cat");
-            Console.WriteLine(video);
+            //video = proxy.GetVideo("cat");
+            //Console.WriteLine(video);
 
-            video = proxy.GetVideo("dog1");
-            Console.WriteLine(video);
+            //video = proxy.GetVideo("dog1");
+            //Console.WriteLine(video);
 
-            video = proxy.GetVideo("dog");
-            Console.WriteLine(video);
+            //video = proxy.GetVideo("dog");
+            //Console.WriteLine(video);
 
-            video = proxy.GetVideo("turtle");
-            Console.WriteLine(video);
+            //video = proxy.GetVideo("turtle");
+            //Console.WriteLine(video);
 
-            proxy.Reset();
+            //proxy.Reset();
 
-            video = proxy.GetVideo("dog");
-            Console.WriteLine(video);
+            //video = proxy.GetVideo("dog");
+            //Console.WriteLine(video);
 
-            video = proxy.GetVideo("turtle");
-            Console.WriteLine(video);
+            //video = proxy.GetVideo("turtle");
+            //Console.WriteLine(video);
 
             // Memento + Command
             //var editor = new Editor();
