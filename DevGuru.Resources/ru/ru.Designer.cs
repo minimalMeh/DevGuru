@@ -359,6 +359,44 @@ namespace DevGuru.Resources.ru {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Интерфейс сервиса определяет общий интерфейс для сервиса и заместителя. Благодаря этому, объект заместителя можно использовать там, где ожидается объект сервиса..
+        /// </summary>
+        internal static string Proxy_Step1 {
+            get {
+                return ResourceManager.GetString("Proxy_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сервис содержит полезную бизнес-логику..
+        /// </summary>
+        internal static string Proxy_Step2 {
+            get {
+                return ResourceManager.GetString("Proxy_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Заместитель хранит ссылку на объект сервиса. После того как заместитель заканчивает свою работу (например, инициализацию, логирование, защиту или другое), он передаёт вызовы вложенному сервису.
+        ///
+        ///Заместитель может сам отвечать за создание и удаление объекта сервиса..
+        /// </summary>
+        internal static string Proxy_Step3 {
+            get {
+                return ResourceManager.GetString("Proxy_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клиент работает с объектами через интерфейс сервиса. Благодаря этому, его можно «одурачить», подменив объект сервиса объектом заместителя..
+        /// </summary>
+        internal static string Proxy_Step4 {
+            get {
+                return ResourceManager.GetString("Proxy_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Контекст хранит ссылку на объект состояния и делегирует ему часть работы, зависящей от состояний. Контекст работает с этим объектом через общий интерфейс состояний. Контекст должен иметь метод для присваивания ему нового объекта-состояния..
         /// </summary>
         internal static string State_Step1 {

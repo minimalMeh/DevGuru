@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using DevGuru.Core.AbstractFactory;
 using DevGuru.Core.Adapter;
@@ -16,6 +17,7 @@ using DevGuru.Core.Memento;
 using DevGuru.Core.Observer.Classic;
 using DevGuru.Core.Observer.Classic.Subscribers;
 using DevGuru.Core.Observer.Models;
+using DevGuru.Core.Proxy;
 using DevGuru.Core.State;
 using DevGuru.Core.State.Levels;
 using DevGuru.Core.TemplateMethod;
@@ -27,29 +29,56 @@ namespace DevGuru
     {
         public static void Main(string[] args)
         {
+            // Proxy
+            var proxy = new YouTubeCacheProxy();
+            proxy.GetPopularVideos().Values.ToList().ForEach(p => Console.WriteLine(p));
+            proxy.GetPopularVideos().Values.ToList().ForEach(p => Console.WriteLine(p));
+            proxy.GetPopularVideos().Values.ToList().ForEach(p => Console.WriteLine(p));
+
+            var video = proxy.GetVideo("turtle");
+            Console.WriteLine(video);
+
+            video = proxy.GetVideo("cat");
+            Console.WriteLine(video);
+
+            video = proxy.GetVideo("dog1");
+            Console.WriteLine(video);
+
+            video = proxy.GetVideo("dog");
+            Console.WriteLine(video);
+
+            video = proxy.GetVideo("turtle");
+            Console.WriteLine(video);
+
+            proxy.Reset();
+
+            video = proxy.GetVideo("dog");
+            Console.WriteLine(video);
+
+            video = proxy.GetVideo("turtle");
+            Console.WriteLine(video);
+
             // Memento + Command
-            var editor = new Editor();
-            editor.Execute(new ChangeTextCommand(editor, "Welcome!"));
-            editor.Execute(new ChangeTextCommand(editor, "Log in"));
-            editor.Execute(new MovePointerCommand(editor, 100, 100));
+            //var editor = new Editor();
+            //editor.Execute(new ChangeTextCommand(editor, "Welcome!"));
+            //editor.Execute(new ChangeTextCommand(editor, "Log in"));
+            //editor.Execute(new MovePointerCommand(editor, 100, 100));
 
-            editor.History.Undo();
-            editor.History.Undo();
-            editor.History.Redo();
+            //editor.History.Undo();
+            //editor.History.Undo();
+            //editor.History.Redo();
 
-            editor.Execute(new ChangeTextCommand(editor, "Try again?"));
-            editor.Execute(new MovePointerCommand(editor, 200, 250));
-            editor.History.Redo();
-            editor.History.Undo();
-            editor.History.Undo();
-            editor.History.Undo();
-            editor.History.Undo();
+            //editor.Execute(new ChangeTextCommand(editor, "Try again?"));
+            //editor.Execute(new MovePointerCommand(editor, 200, 250));
+            //editor.History.Redo();
+            //editor.History.Undo();
+            //editor.History.Undo();
+            //editor.History.Undo();
+            //editor.History.Undo();
+            //editor.History.Undo();
 
-            editor.History.Redo();
-            editor.Execute(new ChangeTextCommand(editor, "Dasha stop."));
-
-
-
+            //editor.History.Redo();
+            //editor.Execute(new ChangeTextCommand(editor, "Dasha stop."));
 
             // Chain of responsibility
             //var user1 = new User(false, true, true);
