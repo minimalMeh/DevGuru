@@ -18,6 +18,7 @@ using DevGuru.Core.Memento;
 using DevGuru.Core.Observer.Classic;
 using DevGuru.Core.Observer.Classic.Subscribers;
 using DevGuru.Core.Observer.Models;
+using DevGuru.Core.Prototype;
 using DevGuru.Core.Proxy;
 using DevGuru.Core.State;
 using DevGuru.Core.State.Levels;
@@ -30,16 +31,24 @@ namespace DevGuru
     {
         public static void Main(string[] args)
         {
+            // Prototype
+            var benchmark = new Rectangle(10, 20, 200, 300);
+            Console.WriteLine(benchmark);
+            Rectangle bcopy = benchmark.Clone() as Rectangle;
+            Console.WriteLine(bcopy);
+            Console.WriteLine($"Check links\nbenchmark and copy: {benchmark == bcopy}\nbenchmark string: {benchmark.rectangleName == bcopy.rectangleName}\n{object.ReferenceEquals(benchmark.rectangleName, bcopy.rectangleName)}");
+
+
             // Decorator
-            string salary = "Name, Salary\nJohn, 1000\nLida, 2000\n";
-            DataSourceDecorator withEncryption = new EncryptionDecorator(
-                new FileDataSource("test.txt"));
+            //string salary = "Name, Salary\nJohn, 1000\nLida, 2000\n";
+            //DataSourceDecorator withEncryption = new EncryptionDecorator(
+            //    new FileDataSource("test.txt"));
 
-            withEncryption.Write(salary);
+            //withEncryption.Write(salary);
 
-            var plainFileDataSource = new FileDataSource("test.txt");
-            Console.WriteLine("Plain file read: \n" + plainFileDataSource.Read());
-            Console.WriteLine("Decorator file read: \n" + withEncryption.Read());
+            //var plainFileDataSource = new FileDataSource("test.txt");
+            //Console.WriteLine("Plain file read: \n" + plainFileDataSource.Read());
+            //Console.WriteLine("Decorator file read: \n" + withEncryption.Read());
 
             // Proxy
             //var proxy = new YouTubeCacheProxy();
