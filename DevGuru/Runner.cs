@@ -13,6 +13,7 @@ using DevGuru.Core.Compose;
 using DevGuru.Core.Decorator;
 using DevGuru.Core.Facade;
 using DevGuru.Core.FactoryMethod;
+using DevGuru.Core.Iterator;
 using DevGuru.Core.Mediator;
 using DevGuru.Core.Memento;
 using DevGuru.Core.Observer.Classic;
@@ -31,12 +32,35 @@ namespace DevGuru
     {
         public static void Main(string[] args)
         {
+            // Iterator
+            var collection = new WordsCollection
+            {
+                "First",
+                "Second",
+                "Third"
+            };
+
+            foreach(var element in collection)
+            {
+                Console.WriteLine(element);
+            }
+
+            Console.WriteLine("Reverse");
+
+            collection.Reverse();
+
+            foreach (var element in collection)
+            {
+                Console.WriteLine(element);
+            }
+
+
             // Prototype
-            var benchmark = new Rectangle(10, 20, 200, 300);
-            Console.WriteLine(benchmark);
-            Rectangle bcopy = benchmark.Clone() as Rectangle;
-            Console.WriteLine(bcopy);
-            Console.WriteLine($"Check links\nbenchmark and copy: {benchmark == bcopy}\nbenchmark string: {benchmark.rectangleName == bcopy.rectangleName}\n{object.ReferenceEquals(benchmark.rectangleName, bcopy.rectangleName)}");
+            //var benchmark = new Rectangle(10, 20, 200, 300);
+            //Console.WriteLine(benchmark);
+            //Rectangle bcopy = benchmark.Clone() as Rectangle;
+            //Console.WriteLine(bcopy);
+            //Console.WriteLine($"Check links\nbenchmark and copy: {benchmark == bcopy}\nbenchmark string: {benchmark.rectangleName == bcopy.rectangleName}\n{object.ReferenceEquals(benchmark.rectangleName, bcopy.rectangleName)}");
 
 
             // Decorator

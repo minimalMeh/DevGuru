@@ -273,6 +273,53 @@ namespace DevGuru.Resources.ua {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ітератор описує інтерфейс для доступу та обходу елементів колекцій..
+        /// </summary>
+        internal static string Iterator_Step1 {
+            get {
+                return ResourceManager.GetString("Iterator_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретний ітератор реалізує алгоритм обходу якоїсь конкретної колекції. Об’єкт ітератора повинен сам відстежувати поточну позицію при обході колекції, щоб окремі ітератори могли обходити одну і ту саму колекцію незалежно..
+        /// </summary>
+        internal static string Iterator_Step2 {
+            get {
+                return ResourceManager.GetString("Iterator_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Колекція описує інтерфейс отримання ітератора з колекції. Як ми вже говорили, колекції не завжди є списком. Це може бути і база даних, і віддалене API, і навіть дерево Компонувальника. Тому сама колекція може створювати ітератори, оскільки вона знає, які саме ітератори здатні з нею працювати..
+        /// </summary>
+        internal static string Iterator_Step3 {
+            get {
+                return ResourceManager.GetString("Iterator_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретна колекція повертає новий екземпляр певного конкретного ітератора, зв’язавши його з поточним об’єктом колекції. Зверніть увагу на те, що сигнатура методу повертає інтерфейс ітератора. Це дозволяє клієнтові не залежати від конкретних класів ітераторів..
+        /// </summary>
+        internal static string Iterator_Step4 {
+            get {
+                return ResourceManager.GetString("Iterator_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клієнт працює з усіма об’єктами через інтерфейси колекції та ітератора. Через це клієнтський код не залежить від конкретних класів, що дозволяє застосовувати різні ітератори, не змінюючи існуючого коду програми.
+        ///
+        ///В загальному випадку клієнти не створюють об’єкти ітераторів, а отримують їх з колекцій. Тим не менше, якщо клієнтові потрібний спеціальний ітератор, він завжди може створити його самостійно..
+        /// </summary>
+        internal static string Iterator_Step5 {
+            get {
+                return ResourceManager.GetString("Iterator_Step5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Компоненти — це різнорідні об’єкти, що містять бізнес-логіку програми. Кожен компонент має посилання на об’єкт посередника, але працює з ним тільки через абстрактний інтерфейс посередників. Завдяки цьому компоненти можна повторно використовувати в інших програмах, зв’язавши їх з посередником іншого типу..
         /// </summary>
         internal static string Mediator_Step1 {
