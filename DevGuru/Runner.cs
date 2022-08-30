@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -24,6 +25,7 @@ using DevGuru.Core.Proxy;
 using DevGuru.Core.State;
 using DevGuru.Core.State.Levels;
 using DevGuru.Core.TemplateMethod;
+using DevGuru.Core.Visitor;
 using File = DevGuru.Core.Compose.File;
 
 namespace DevGuru
@@ -32,27 +34,37 @@ namespace DevGuru
     {
         public static void Main(string[] args)
         {
+            // Visitor
+            var dot = new Dot(1, 10, 20);
+            var dot2 = new Dot(3, 11, 20);
+            var dot3 = new Dot(4, 12, 20);
+            var dot4 = new Dot(5, 13, 20);
+            var circle = new Circle(2, 10);
+
+            var exportVisitor = new XmlExportVisitor();
+            Console.WriteLine(exportVisitor.Export(dot, dot2, dot3, circle, dot4));
+
             // Iterator
-            var collection = new WordsCollection
-            {
-                "First",
-                "Second",
-                "Third"
-            };
+            //var collection = new WordsCollection
+            //{
+            //    "First",
+            //    "Second",
+            //    "Third"
+            //};
 
-            foreach(var element in collection)
-            {
-                Console.WriteLine(element);
-            }
+            //foreach(var element in collection)
+            //{
+            //    Console.WriteLine(element);
+            //}
 
-            Console.WriteLine("Reverse");
+            //Console.WriteLine("Reverse");
 
-            collection.Reverse();
+            //collection.Reverse();
 
-            foreach (var element in collection)
-            {
-                Console.WriteLine(element);
-            }
+            //foreach (var element in collection)
+            //{
+            //    Console.WriteLine(element);
+            //}
 
 
             // Prototype

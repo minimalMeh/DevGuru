@@ -354,5 +354,50 @@ namespace DevGuru.Resources.ua {
                 return ResourceManager.GetString("Mediator_Step4", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Відвідувач описує спільний для всіх типів відвідувачів інтерфейс. Він оголошує набір методів, що відрізняються типом вхідного параметра. Кожному класу конкретних елементів повинен підходити свій метод. В мовах, які підтримують перевантаження методів, ці методи можуть мати однакові імена, але типи їхніх параметрів повинні відрізнятися..
+        /// </summary>
+        internal static string Visitor_Step1 {
+            get {
+                return ResourceManager.GetString("Visitor_Step1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретні відвідувачі реалізують якусь особливу поведінку для всіх типів елементів, які можна подати через методи інтерфейсу відвідувача..
+        /// </summary>
+        internal static string Visitor_Step2 {
+            get {
+                return ResourceManager.GetString("Visitor_Step2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Елемент описує метод прийому відвідувача. Цей метод повинен мати лише один параметр, оголошений з типом загального інтерфейсу відвідувачів..
+        /// </summary>
+        internal static string Visitor_Step3 {
+            get {
+                return ResourceManager.GetString("Visitor_Step3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конкретні елементи реалізують методи приймання відвідувача. Мета цього методу — викликати той метод відвідування, який відповідає типу цього елемента. Так відвідувач дізнається, з яким типом елементу він працює.
+        /// </summary>
+        internal static string Visitor_Step4 {
+            get {
+                return ResourceManager.GetString("Visitor_Step4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клієнтом зазвичай виступає колекція або складний складовий об’єкт, наприклад, дерево Компонувальника. Здебільшого, клієнт не прив’язаний до конкретних класів елементів, працюючи з ними через загальний інтерфейс елементів..
+        /// </summary>
+        internal static string Visitor_Step5 {
+            get {
+                return ResourceManager.GetString("Visitor_Step5", resourceCulture);
+            }
+        }
     }
 }
