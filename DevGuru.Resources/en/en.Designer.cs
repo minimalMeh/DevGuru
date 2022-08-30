@@ -113,5 +113,16 @@ namespace DevGuru.Resources.en {
                 return ResourceManager.GetString("Observer_Step6", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Singleton class declares the static method getInstance that returns the same instance of its own class.
+        ///
+        ///The Singleton’s constructor should be hidden from the client code. Calling the getInstance method should be the only way of getting the Singleton object..
+        /// </summary>
+        internal static string Singleton_Step1 {
+            get {
+                return ResourceManager.GetString("Singleton_Step1", resourceCulture);
+            }
+        }
     }
 }

@@ -135,4 +135,9 @@
   <data name="Observer_Step6" xml:space="preserve">
     <value>The Client creates publisher and subscriber objects separately and then registers subscribers for publisher updates.</value>
   </data>
+  <data name="Singleton_Step1" xml:space="preserve">
+    <value>The Singleton class declares the static method getInstance that returns the same instance of its own class.
+
+The Singleton’s constructor should be hidden from the client code. Calling the getInstance method should be the only way of getting the Singleton object.</value>
+  </data>
 </root>

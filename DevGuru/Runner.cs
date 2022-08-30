@@ -22,6 +22,7 @@ using DevGuru.Core.Observer.Classic.Subscribers;
 using DevGuru.Core.Observer.Models;
 using DevGuru.Core.Prototype;
 using DevGuru.Core.Proxy;
+using DevGuru.Core.Singleton;
 using DevGuru.Core.State;
 using DevGuru.Core.State.Levels;
 using DevGuru.Core.TemplateMethod;
@@ -34,15 +35,23 @@ namespace DevGuru
     {
         public static void Main(string[] args)
         {
-            // Visitor
-            var dot = new Dot(1, 10, 20);
-            var dot2 = new Dot(3, 11, 20);
-            var dot3 = new Dot(4, 12, 20);
-            var dot4 = new Dot(5, 13, 20);
-            var circle = new Circle(2, 10);
+            // Singleton 
+            // https://csharpindepth.com/Articles/Singleton
+            // Top-1
+            NotLazyButThreadSafeWithoutLocksSingleton singleton = NotLazyButThreadSafeWithoutLocksSingleton.Instance;
+            SimpleThreadSafeSingleton singleton2 = SimpleThreadSafeSingleton.Instance;
+            ModernLazyTypedSingleton singleton3 = ModernLazyTypedSingleton.Instance;
+            FullyLazyInstantiationSingleton singleton4 = FullyLazyInstantiationSingleton.Instance;
 
-            var exportVisitor = new XmlExportVisitor();
-            Console.WriteLine(exportVisitor.Export(dot, dot2, dot3, circle, dot4));
+            // Visitor
+            //var dot = new Dot(1, 10, 20);
+            //var dot2 = new Dot(3, 11, 20);
+            //var dot3 = new Dot(4, 12, 20);
+            //var dot4 = new Dot(5, 13, 20);
+            //var circle = new Circle(2, 10);
+
+            //var exportVisitor = new XmlExportVisitor();
+            //Console.WriteLine(exportVisitor.Export(dot, dot2, dot3, circle, dot4));
 
             // Iterator
             //var collection = new WordsCollection
