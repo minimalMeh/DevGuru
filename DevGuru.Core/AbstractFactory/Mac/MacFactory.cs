@@ -1,4 +1,5 @@
-﻿using DevGuru.Core.AbstractFactory.Interfaces;
+﻿using System;
+using DevGuru.Core.AbstractFactory.Interfaces;
 
 namespace DevGuru.Core.AbstractFactory.Mac
 {
@@ -6,11 +7,13 @@ namespace DevGuru.Core.AbstractFactory.Mac
     {
         public IButton CreateButton()
         {
+            Console.WriteLine($"{nameof(MacFactory)} is creating {nameof(MacButton)}.");
             return new MacButton();
         }
 
         public ITextbox CreateTextbox()
         {
+            Console.WriteLine($"{nameof(MacFactory)} is creating {nameof(MacTextbox)}.");
             return new MacTextbox();
         }
     }

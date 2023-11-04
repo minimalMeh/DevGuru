@@ -7,7 +7,7 @@ namespace DevGuru.Core.AbstractFactory.Mac
     {
         public void Draw()
         {
-            Console.WriteLine("Draw Mac textbox");    
+            Console.WriteLine($"{nameof(MacTextbox)} is drawn");
         }
     }
 }

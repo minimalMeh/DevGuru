@@ -1,4 +1,0 @@
-﻿I need a project that will store all patterns. 
-The pattern should have his own realization.
-
-The app starts and presents a list of patterns 

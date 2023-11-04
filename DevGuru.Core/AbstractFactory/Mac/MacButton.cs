@@ -7,12 +7,12 @@ namespace DevGuru.Core.AbstractFactory.Mac
     {
         public void Click()
         {
-            Console.WriteLine("MacButton clicked");
+            Console.WriteLine($"{nameof(MacButton)} clicked");
         }
 
         public void Draw()
         {
-            Console.WriteLine("MacButton is drawn");
+            Console.WriteLine($"{nameof(MacButton)} is drawn");
         }
     }
 }

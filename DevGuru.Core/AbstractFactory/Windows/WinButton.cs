@@ -5,14 +5,8 @@ namespace DevGuru.Core.AbstractFactory.Windows
 {
     public class WinButton : IButton
     {
-        public void Click()
-        {
-            Console.WriteLine("WinButton clicked");
-        }
+        public void Click() => Console.WriteLine($"{nameof(WinButton)} clicked");
 
-        public void Draw()
-        {
-            Console.WriteLine("WinButton is drawn");
-        }
+        public void Draw() => Console.WriteLine($"{nameof(WinButton)} is drawn");
     }
 }

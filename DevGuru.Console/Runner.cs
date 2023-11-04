@@ -29,19 +29,23 @@ using DevGuru.Core.TemplateMethod;
 using DevGuru.Core.Visitor;
 using File = DevGuru.Core.Compose.File;
 
-namespace DevGuru
+namespace DevGuru.Console
 {
     public static class Runner
     {
         public static void Main(string[] args)
         {
+            IPattern pattern = new AbstractFactoryPattern();
+            pattern.Run();
+
+
             // Singleton 
             // https://csharpindepth.com/Articles/Singleton
             // Top-1
-            NotLazyButThreadSafeWithoutLocksSingleton singleton = NotLazyButThreadSafeWithoutLocksSingleton.Instance;
-            SimpleThreadSafeSingleton singleton2 = SimpleThreadSafeSingleton.Instance;
-            ModernLazyTypedSingleton singleton3 = ModernLazyTypedSingleton.Instance;
-            FullyLazyInstantiationSingleton singleton4 = FullyLazyInstantiationSingleton.Instance;
+            //NotLazyButThreadSafeWithoutLocksSingleton singleton = NotLazyButThreadSafeWithoutLocksSingleton.Instance;
+            //SimpleThreadSafeSingleton singleton2 = SimpleThreadSafeSingleton.Instance;
+            //ModernLazyTypedSingleton singleton3 = ModernLazyTypedSingleton.Instance;
+            //FullyLazyInstantiationSingleton singleton4 = FullyLazyInstantiationSingleton.Instance;
 
             // Visitor
             //var dot = new Dot(1, 10, 20);
@@ -175,7 +179,7 @@ namespace DevGuru
             //Thread.Sleep(1000);
             //executor.Send("Here is a new release");
 
-            // Facade
+            // Facade (фасАаад)
             //Client.Operation(new Facade(new Subsystem1(), new Subsystem2()));
 
             // Observer not C# sample, just observer, TODO: adequate c# event 

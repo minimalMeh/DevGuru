@@ -11,18 +11,17 @@ namespace DevGuru.Core.AbstractFactory
         {
             IGUIFactory factory;
 
-            if (configuration.Equals("Windows", StringComparison.OrdinalIgnoreCase))
+            switch (configuration)
             {
-                factory = new WinFactory();
-            }
-            else if (configuration.Equals("Mac", StringComparison.OrdinalIgnoreCase))
-            {
-                factory = new MacFactory();
-            }
-            else
-            {
-                Console.WriteLine("Invalid configuration. please specify windows or mac");
-                return;
+                case "mac":
+                    factory = new MacFactory();
+                    break;
+                case "win":
+                    factory = new WinFactory();
+                    break;
+                default:
+                    Console.WriteLine("Invalid configuration. please try again and specify Win or Mac.");
+                    return;
             }
 
             var btn = factory.CreateButton();

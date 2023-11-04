@@ -1,4 +1,5 @@
-﻿using DevGuru.Core.AbstractFactory.Interfaces;
+﻿using System;
+using DevGuru.Core.AbstractFactory.Interfaces;
 
 namespace DevGuru.Core.AbstractFactory.Windows
 {
@@ -6,11 +7,13 @@ namespace DevGuru.Core.AbstractFactory.Windows
     {
         public IButton CreateButton()
         {
+            Console.WriteLine($"{nameof(WinFactory)} is creating {nameof(WinButton)}");
             return new WinButton();
         }
 
         public ITextbox CreateTextbox()
         {
+            Console.WriteLine($"{nameof(WinFactory)} is creating {nameof(WinTextbox)}");
             return new WinTextbox();
         }
     }
