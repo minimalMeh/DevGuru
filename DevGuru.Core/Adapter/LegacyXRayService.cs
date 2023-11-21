@@ -1,8 +1,12 @@
-﻿namespace DevGuru.Core.Adapter
+﻿using System;
+
+namespace DevGuru.Core.Adapter
 {
-    public sealed class LegacyXRayService // Adaptee with useful beahvior.
+    // Adaptee with useful beahvior.
+    public sealed class LegacyXRayService
     {
         private readonly string configuration;
+
         public LegacyXRayService(string configuration)
         {
             this.configuration = configuration;
@@ -10,7 +14,8 @@
 
         public string Analyze()
         {
-            return "Some conclusion after the analysis. Configuration: " + configuration;
+            Console.WriteLine($"{nameof(LegacyXRayService)} is executing {nameof(Analyze)}");
+            return $"Some conclusion after the analysis in the {nameof(LegacyXRayService)}. Configuration: {configuration}";
         }
     }
 }

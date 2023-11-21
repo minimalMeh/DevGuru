@@ -5,21 +5,24 @@ namespace DevGuru.Core.Adapter
     public class DiagnosisService : IDiagnosisService
     {
         private readonly LegacyXRayService legacyXRayService;
+
         public DiagnosisService(LegacyXRayService legacyXRayService)
         {
             this.legacyXRayService = legacyXRayService;
         }
 
-        public void Print()
+        public void PrintReport()
         {
+            Console.WriteLine($"{nameof(DiagnosisService)} is executing {nameof(PrintReport)}");
+
             Console.WriteLine("\tReport:");
             Console.WriteLine("\tDoctors report: " + GetDoctorsConclusion());
             Console.WriteLine("\tX-ray information:" + "\n\t\t" + legacyXRayService.Analyze());
         }
 
-        private string GetDoctorsConclusion()
+        private static string GetDoctorsConclusion()
         {
-            return "\n\t\tBlah blah hope you don't die soon.";
+            return $"{nameof(GetDoctorsConclusion)} is called. Some Doctor's conclusion.";
         }
     }
 }

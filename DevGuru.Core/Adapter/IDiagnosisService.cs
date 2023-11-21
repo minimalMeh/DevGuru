@@ -2,6 +2,6 @@
 {
     public interface IDiagnosisService
     {
-        void Print();
+        void PrintReport();
     }
 }
