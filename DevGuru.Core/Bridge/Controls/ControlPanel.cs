@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DevGuru.Core.Bridge
+namespace DevGuru.Core.Bridge.Controls
 {
     public class ControlPanel : IRemoteControl
     {
@@ -10,11 +10,12 @@ namespace DevGuru.Core.Bridge
         public ControlPanel(string connectionString)
         {
             this.connectionString = connectionString;
-            Console.WriteLine($"Control panel connection '{this.connectionString}' established.");
+            Console.WriteLine($"{nameof(ControlPanel)} connection '{connectionString}' established.");
         }
 
         public void TogglePower()
         {
+            Console.WriteLine($"Execute {nameof(ControlPanel)}.{nameof(TogglePower)}; New state is {!PowerState}.");
             PowerState = !PowerState;
         }
     }

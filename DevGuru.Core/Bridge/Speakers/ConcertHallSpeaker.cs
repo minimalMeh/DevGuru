@@ -1,36 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using DevGuru.Core.Bridge.Controls;
 
 namespace DevGuru.Core.Bridge.Speakers
 {
     public class ConcertHallSpeaker : ISpeaker
     {
         private IRemoteControl device;
-
-        public void PairDevice(IRemoteControl device)
-        {
-            this.device = device;
-            Console.WriteLine($"The device {device.GetType().Name} has been paired for {this.GetType().Name}.");
-        }
-
-        public void TurnOff()
-        {
-            if (device == null)
-            {
-                throw new ArgumentNullException("Speaker is unpaired.");
-            }
-
-            if (device.PowerState)
-            {
-                device.TogglePower();
-                Console.WriteLine($"Device {device.GetType().Name} turned off.");
-            }
-        }
+        private string DeviceName => device?.GetType().Name;
 
         public void TurnOn()
         {
-            if (device == null)
+            if (device is null)
             {
                 throw new ArgumentNullException("Speaker is unpaired.");
             }
@@ -38,8 +18,28 @@ namespace DevGuru.Core.Bridge.Speakers
             if (!device.PowerState)
             {
                 device.TogglePower();
-                Console.WriteLine($"Device {device.GetType().Name} turned on.");
+                Console.WriteLine($"{nameof(ConcertHallSpeaker)}: Device {DeviceName} turned on.");
             }
+        }
+
+        public void TurnOff()
+        {
+            if (device is null)
+            {
+                throw new ArgumentNullException($"{nameof(ConcertHallSpeaker)}: Speaker is unpaired.");
+            }
+
+            if (device.PowerState)
+            {
+                device.TogglePower();
+                Console.WriteLine($"{nameof(ConcertHallSpeaker)}: Device {DeviceName} turned off.");
+            }
+        }
+
+        public void PairDevice(IRemoteControl device)
+        {
+            this.device = device;
+            Console.WriteLine($"{nameof(ConcertHallSpeaker)}: The device {DeviceName} has been paired.");
         }
     }
 }

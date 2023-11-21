@@ -1,9 +1,8 @@
-﻿namespace DevGuru.Core.Bridge
+﻿namespace DevGuru.Core.Bridge.Controls
 {
     public interface IRemoteControl
     {
         bool PowerState { get; }
-
         void TogglePower();
     }
 }
