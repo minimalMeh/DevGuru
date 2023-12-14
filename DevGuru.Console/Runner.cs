@@ -9,18 +9,34 @@ namespace DevGuru.Console
     {
         public static void Main(string[] args)
         {
-            IPattern pattern = new BuilderPattern();
-            pattern.Run();
+            System.Console.WriteLine("GOF PATTERNS CONSOLE APP");
+            System.Console.WriteLine("Q: exit\nC: clean\n");
 
-            pattern = new AbstractFactoryPattern();
-            pattern.Run();
+            while (true)
+            {
+                System.Console.Write("Specify pattern name: ");
+                var patternName = System.Console.ReadLine()?.ToLower();
 
-            pattern = new AdapterPattern();
-            pattern.Run();
+                if (string.IsNullOrWhiteSpace(patternName))
+                    continue;
 
-            pattern = new BridgePattern();
-            pattern.Run();
+                if (patternName == "q")
+                    break;
 
+                if (patternName == "c")
+                    System.Console.Clear();
+
+                IPattern pattern = patternName.ToLower() switch
+                {
+                    "abstract" or "abstract factory" => new AbstractFactoryPattern(),
+                    "adapter" or "adapt" => new AdapterPattern(),
+                    "bridge" => new BridgePattern(),
+                    "builder" or "bldr" => new BuilderPattern(),
+                    _ => null
+                };
+
+                pattern?.Run();
+            }
 
             // Singleton 
             // https://csharpindepth.com/Articles/Singleton
