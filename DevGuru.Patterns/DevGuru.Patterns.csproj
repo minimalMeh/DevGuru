@@ -1,13 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DevGuru.Core\DevGuru.Core.csproj" />
-    <ProjectReference Include="..\DevGuru.Patterns\DevGuru.Patterns.csproj" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
   </ItemGroup>
-	
+
+  <ItemGroup>
+    <ProjectReference Include="..\DevGuru.Core\DevGuru.Core.csproj" />
+  </ItemGroup>
+
 </Project>

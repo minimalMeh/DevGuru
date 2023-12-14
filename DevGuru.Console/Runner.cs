@@ -1,4 +1,5 @@
-﻿using DevGuru.Core.AbstractFactory;
+﻿using DevGuru.Core;
+using DevGuru.Patterns.AbstractFactory;
 using DevGuru.Patterns.Adapter;
 using DevGuru.Patterns.Bridge;
 using DevGuru.Patterns.Builder;
