@@ -1,5 +1,5 @@
-﻿using System;
-using DevGuru.Core.FactoryMethod.Interfaces;
+﻿using DevGuru.Core.FactoryMethod.Interfaces;
+using System;
 
 namespace DevGuru.Core.FactoryMethod.Dialogs
 {

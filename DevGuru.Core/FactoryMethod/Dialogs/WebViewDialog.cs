@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DevGuru.Core.FactoryMethod.Buttons;
+﻿using DevGuru.Core.FactoryMethod.Buttons;
 using DevGuru.Core.FactoryMethod.Interfaces;
 
 namespace DevGuru.Core.FactoryMethod.Dialogs

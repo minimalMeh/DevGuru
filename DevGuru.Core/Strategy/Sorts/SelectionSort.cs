@@ -1,8 +1,8 @@
-﻿using System;
+﻿using DevGuru.Core.Strategy.Helpers;
+using DevGuru.Core.Strategy.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using DevGuru.Core.Strategy.Helpers;
-using DevGuru.Core.Strategy.Interfaces;
 
 namespace DevGuru.Core.Strategy.Concrete
 {

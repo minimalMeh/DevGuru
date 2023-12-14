@@ -1,10 +1,10 @@
-﻿using System;
+﻿using DevGuru.Core.Observer.Interfaces;
+using System;
 using System.Collections.Generic;
-using DevGuru.Core.Observer.Interfaces;
 
 namespace DevGuru.Core.Observer.Classic.Subscribers
 {
-    public class TechnicalUniversity : Subscriber 
+    public class TechnicalUniversity : Subscriber
     {
         private List<ISienceEvent> FollowingEvents { get; } = new List<ISienceEvent>();
 

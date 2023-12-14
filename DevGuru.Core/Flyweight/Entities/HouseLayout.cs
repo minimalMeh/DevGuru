@@ -17,7 +17,7 @@ namespace DevGuru.Core.Flyweight.Entities
 
             try
             {
-                bitmap = new Bitmap(Path.Combine(Assembly.GetExecutingAssembly().Location, "layouts", Type,  bitmapName));
+                bitmap = new Bitmap(Path.Combine(Assembly.GetExecutingAssembly().Location, "layouts", Type, bitmapName));
             }
             catch
             {

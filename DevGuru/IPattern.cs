@@ -1,6 +1,4 @@
-﻿using System.Threading;
-
-namespace DevGuru
+﻿namespace DevGuru
 {
     public interface IPattern
     {

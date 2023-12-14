@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using DevGuru.Core.State.Enums;
+using System.Collections.Generic;
 using System.IO;
-using DevGuru.Core.State.Enums;
 
 namespace DevGuru.Core.State
 {

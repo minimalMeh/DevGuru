@@ -1,5 +1,5 @@
 ﻿namespace DevGuru.Core.Memento
-{ 
+{
     public class MovePointerCommand : ICommand
     {
         private readonly Editor editor;

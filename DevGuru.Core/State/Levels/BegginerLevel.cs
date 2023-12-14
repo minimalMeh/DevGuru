@@ -1,7 +1,7 @@
-﻿using System;
+﻿using DevGuru.Core.State.Enums;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using DevGuru.Core.State.Enums;
 
 namespace DevGuru.Core.State.Levels
 {

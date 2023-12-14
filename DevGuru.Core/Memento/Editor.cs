@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-namespace DevGuru.Core.Memento
+﻿namespace DevGuru.Core.Memento
 {
     public class Editor // Originator
     {

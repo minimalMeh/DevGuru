@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DevGuru.Core.Singleton
+﻿namespace DevGuru.Core.Singleton
 {
     public sealed class FullyLazyInstantiationSingleton
     {

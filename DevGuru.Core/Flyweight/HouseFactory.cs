@@ -1,6 +1,6 @@
-﻿using System;
+﻿using DevGuru.Core.Flyweight.Entities;
+using System;
 using System.Collections.Generic;
-using DevGuru.Core.Flyweight.Entities;
 
 namespace DevGuru.Core.Flyweight
 {

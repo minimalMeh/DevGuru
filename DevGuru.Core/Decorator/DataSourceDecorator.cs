@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DevGuru.Core.Decorator
+﻿namespace DevGuru.Core.Decorator
 {
     public abstract class DataSourceDecorator : IDataSource // Base decorator
     {

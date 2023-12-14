@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DevGuru.Core.Prototype
+﻿namespace DevGuru.Core.Prototype
 {
     public class Rectangle : Shape
     {

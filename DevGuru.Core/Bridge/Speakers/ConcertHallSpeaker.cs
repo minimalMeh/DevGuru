@@ -1,5 +1,5 @@
-﻿using System;
-using DevGuru.Core.Bridge.Controls;
+﻿using DevGuru.Core.Bridge.Controls;
+using System;
 
 namespace DevGuru.Core.Bridge.Speakers
 {

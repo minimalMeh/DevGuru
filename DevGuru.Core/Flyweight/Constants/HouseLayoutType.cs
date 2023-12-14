@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DevGuru.Core.Flyweight.Constants
+﻿namespace DevGuru.Core.Flyweight.Constants
 {
     public class HouseLayoutType
     {

@@ -1,7 +1,5 @@
-﻿using System;
+﻿using DevGuru.Core.Flyweight.Entities;
 using System.Collections.Generic;
-using System.Text;
-using DevGuru.Core.Flyweight.Entities;
 
 namespace DevGuru.Core.Flyweight
 {

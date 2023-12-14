@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DevGuru.Core.Observer.Classic.Subscribers;
+﻿using DevGuru.Core.Observer.Classic.Subscribers;
 using DevGuru.Core.Observer.Interfaces;
+using System;
+using System.Collections.Generic;
 
 namespace DevGuru.Core.Observer.Classic
 {

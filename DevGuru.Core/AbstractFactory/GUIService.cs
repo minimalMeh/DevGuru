@@ -1,7 +1,7 @@
-﻿using System;
-using DevGuru.Core.AbstractFactory.Interfaces;
+﻿using DevGuru.Core.AbstractFactory.Interfaces;
 using DevGuru.Core.AbstractFactory.Mac;
 using DevGuru.Core.AbstractFactory.Windows;
+using System;
 
 namespace DevGuru.Core.AbstractFactory
 {

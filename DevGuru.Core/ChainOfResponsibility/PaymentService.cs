@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DevGuru.Core.ChainOfResponsibility
+﻿namespace DevGuru.Core.ChainOfResponsibility
 {
     public class PaymentService
     {

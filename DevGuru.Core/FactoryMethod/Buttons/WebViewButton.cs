@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DevGuru.Core.FactoryMethod.Interfaces;
+﻿using DevGuru.Core.FactoryMethod.Interfaces;
+using System;
 
 namespace DevGuru.Core.FactoryMethod.Buttons
 {

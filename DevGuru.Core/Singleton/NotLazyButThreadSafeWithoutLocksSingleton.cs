@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DevGuru.Core.Singleton
+﻿namespace DevGuru.Core.Singleton
 {
     // Fourth version - not quite as lazy, but thread-safe without using locks
     public sealed class NotLazyButThreadSafeWithoutLocksSingleton

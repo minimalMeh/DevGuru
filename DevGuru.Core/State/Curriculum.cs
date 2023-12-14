@@ -1,6 +1,6 @@
-﻿using System;
+﻿using DevGuru.Core.State.Enums;
+using System;
 using System.Linq;
-using DevGuru.Core.State.Enums;
 
 namespace DevGuru.Core.State
 {

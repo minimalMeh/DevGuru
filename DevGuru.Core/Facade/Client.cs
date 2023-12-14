@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DevGuru.Core.Facade
+﻿namespace DevGuru.Core.Facade
 {
     public static class Client
     {

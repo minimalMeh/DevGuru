@@ -1,33 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading;
-using DevGuru.Core.AbstractFactory;
-using DevGuru.Core.Adapter;
-using DevGuru.Core.Bridge;
-using DevGuru.Core.Bridge.Speakers;
-using DevGuru.Core.Builder;
-using DevGuru.Core.ChainOfResponsibility;
-using DevGuru.Core.Command;
-using DevGuru.Core.Compose;
-using DevGuru.Core.Decorator;
-using DevGuru.Core.Facade;
-using DevGuru.Core.FactoryMethod;
-using DevGuru.Core.Iterator;
-using DevGuru.Core.Mediator;
-using DevGuru.Core.Memento;
-using DevGuru.Core.Observer.Classic;
-using DevGuru.Core.Observer.Classic.Subscribers;
-using DevGuru.Core.Observer.Models;
-using DevGuru.Core.Prototype;
-using DevGuru.Core.Proxy;
-using DevGuru.Core.Singleton;
-using DevGuru.Core.State;
-using DevGuru.Core.State.Levels;
-using DevGuru.Core.TemplateMethod;
-using DevGuru.Core.Visitor;
-using File = DevGuru.Core.Compose.File;
+﻿using DevGuru.Patterns.Bridge;
 
 namespace DevGuru.Console
 {
@@ -35,7 +6,7 @@ namespace DevGuru.Console
     {
         public static void Main(string[] args)
         {
-            IPattern pattern = new AbstractFactoryPattern();
+            IPattern pattern = new BridgePattern();
             pattern.Run();
 
 
@@ -241,19 +212,6 @@ namespace DevGuru.Console
             //GUIService.SimulateGUI("goofy");
             //GUIService.SimulateGUI("mac");
 
-            // Bridge
-            //var control = new PhoneRemoteControl();
-            //var speaker = new ConcertHallSpeaker();
-            //speaker.PairDevice(control);
-            //speaker.TurnOn();
-            //speaker.TurnOff();
-            //speaker.PairDevice(new ControlPanel("poroshenko"));
-            //speaker.TurnOn();
-            //speaker.TurnOff();
-
-            // Adapter
-            //IDiagnosisService adapter = new DiagnosisService(new LegacyXRayService("Back"));
-            //adapter.Print();
 
             // State
             //var context = new Curriculum(new BegginerLevel(), "Math");

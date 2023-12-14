@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using DevGuru.Core.Observer.Interfaces;
+﻿using DevGuru.Core.Observer.Interfaces;
 
 namespace DevGuru.Core.Observer.Classic.Subscribers
 {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DevGuru.Core.Visitor
+﻿namespace DevGuru.Core.Visitor
 {
     public interface IVisitor
     {

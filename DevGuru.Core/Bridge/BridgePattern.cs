@@ -1,5 +1,4 @@
-﻿using System;
-using DevGuru.Core.Bridge.Controls;
+﻿using DevGuru.Core.Bridge.Controls;
 using DevGuru.Core.Bridge.Speakers;
 
 namespace DevGuru.Patterns.Bridge
