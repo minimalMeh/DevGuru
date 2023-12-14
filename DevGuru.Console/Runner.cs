@@ -1,4 +1,7 @@
-﻿using DevGuru.Patterns.Bridge;
+﻿using DevGuru.Core.AbstractFactory;
+using DevGuru.Patterns.Adapter;
+using DevGuru.Patterns.Bridge;
+using DevGuru.Patterns.Builder;
 
 namespace DevGuru.Console
 {
@@ -6,7 +9,16 @@ namespace DevGuru.Console
     {
         public static void Main(string[] args)
         {
-            IPattern pattern = new BridgePattern();
+            IPattern pattern = new BuilderPattern();
+            pattern.Run();
+
+            pattern = new AbstractFactoryPattern();
+            pattern.Run();
+
+            pattern = new AdapterPattern();
+            pattern.Run();
+
+            pattern = new BridgePattern();
             pattern.Run();
 
 
@@ -189,15 +201,6 @@ namespace DevGuru.Console
             //var fileR = new File("RootFile.db", 20000);
             //compose.Add(root, fileR);
             //Console.WriteLine(compose.GetSize(root));
-
-            // Builder
-            //var bakery = new Bakery();
-            //var crsntBuilder = new СroissantBuilder();
-            //bakery.Bake(crsntBuilder);
-            //Console.WriteLine(crsntBuilder.GetProduct().ToString());
-            //var bgtBuilder = new BaguetteBuilder();
-            //bakery.Bake(bgtBuilder);
-            //Console.WriteLine(bgtBuilder.GetProduct().ToString()); 
 
 
             // Factory method

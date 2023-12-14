@@ -3,9 +3,12 @@ using DevGuru.Core.Bridge.Speakers;
 
 namespace DevGuru.Patterns.Bridge
 {
-    public class BridgePattern : IPattern
+    public class BridgePattern : BasePattern
     {
-        public void Run()
+        public override string Name => "Bridge";
+        public override string IdeaFormatted => "\t[Concert Hall Speaker can be ON/OFF by different devices]\n";
+
+        public override void RunCore()
         {
             var speaker = new ConcertHallSpeaker();
 

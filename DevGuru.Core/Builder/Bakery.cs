@@ -2,7 +2,7 @@
 {
     public class Bakery
     {
-        public void Bake(IBakingBuilder builder)
+        public static void Bake(IBakingBuilder builder)
         {
             builder.SetFlour();
             builder.SetSalt();

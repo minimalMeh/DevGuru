@@ -9,9 +9,7 @@ namespace DevGuru.Core.Builder
         public double Weight { get; set; }
         public HashSet<string> Supplements { get; } = new HashSet<string>();
 
-        public override string ToString()
-        {
-            return $"Flour: {Flour};\nSalt: {Salt}gr\nWeight: {Weight}gr\nSupplements: {(Supplements.Count > 0 ? string.Join(',', Supplements) : "-")}";
-        }
+        public override string ToString() =>
+            $"\n\tBread Description:\n\tFlour: {Flour};\n\tSalt: {Salt}gr;\n\tWeight: {Weight}gr;\n\tSupplements: {(Supplements.Count > 0 ? string.Join(", ", Supplements) : "-")};\n";
     }
 }

@@ -15,8 +15,8 @@ namespace DevGuru.Core.Bridge.Controls
 
         public void TogglePower()
         {
-            Console.WriteLine($"Execute {nameof(ControlPanel)}.{nameof(TogglePower)}; New state is {!PowerState}.");
             PowerState = !PowerState;
+            Console.WriteLine($"Execute {nameof(ControlPanel)}.{nameof(TogglePower)}: New state is {PowerState}.");
         }
     }
 }
