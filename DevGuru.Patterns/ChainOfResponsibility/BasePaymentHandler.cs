@@ -3,6 +3,6 @@
     public abstract class BasePaymentHandler
     {
         protected BasePaymentHandler Next { get; set; }
-        public abstract void Handle(User user);
+        public abstract void Handle(UserPaymentInfo user);
     }
 }

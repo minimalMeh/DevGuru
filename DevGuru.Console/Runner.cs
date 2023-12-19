@@ -3,6 +3,7 @@ using DevGuru.Patterns.AbstractFactory;
 using DevGuru.Patterns.Adapter;
 using DevGuru.Patterns.Bridge;
 using DevGuru.Patterns.Builder;
+using DevGuru.Patterns.ChainOfResponsibility;
 
 namespace DevGuru.Console
 {
@@ -33,6 +34,7 @@ namespace DevGuru.Console
                     "adapter" or "adapt" => new AdapterPattern(),
                     "bridge" => new BridgePattern(),
                     "builder" or "bldr" => new BuilderPattern(),
+                    "cor" or "chain of responsibility" or "chain" or "responsibility" or "chainofresponsibility" => new ChainOfResponsibilityPattern(),
                     _ => null
                 };
 
@@ -149,17 +151,6 @@ namespace DevGuru.Console
 
             //editor.History.Redo();
             //editor.Execute(new ChangeTextCommand(editor, "Dasha stop."));
-
-            // Chain of responsibility
-            //var user1 = new User(false, true, true);
-            //var user2 = new User(true, true, true);
-            //var user3 = new User(false, false, true);
-
-            //var paymentService = new PaymentService();
-
-            //paymentService.ProceedPayment(user1);
-            //paymentService.ProceedPayment(user2);
-            //paymentService.ProceedPayment(user3);
 
             // Command
             //var tv = new TV();

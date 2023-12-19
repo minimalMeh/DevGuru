@@ -9,15 +9,15 @@ namespace DevGuru.Patterns.ChainOfResponsibility
             Next = next;
         }
 
-        public override void Handle(User user)
+        public override void Handle(UserPaymentInfo user)
         {
             if (user.BankPayment)
             {
-                Console.WriteLine("Transfer money by Bank.");
+                Console.WriteLine("Money were sent via the Bank.");
             }
-            else if (Next != null)
+            else
             {
-                Next.Handle(user);
+                Next?.Handle(user);
             }
         }
     }

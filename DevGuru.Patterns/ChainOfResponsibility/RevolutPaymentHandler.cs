@@ -9,15 +9,15 @@ namespace DevGuru.Patterns.ChainOfResponsibility
             Next = next;
         }
 
-        public override void Handle(User user)
+        public override void Handle(UserPaymentInfo user)
         {
             if (user.RevolutPayment)
             {
-                Console.WriteLine("Transfer money by Revolut.");
+                Console.WriteLine("Money were sent via the Revolut.");
             }
-            else if (Next != null)
+            else
             {
-                Next.Handle(user);
+                Next?.Handle(user);
             }
         }
     }

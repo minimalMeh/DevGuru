@@ -13,7 +13,7 @@
             handler = bank;
         }
 
-        public void ProceedPayment(User user)
+        public void ProceedPayment(UserPaymentInfo user)
         {
             handler.Handle(user);
         }

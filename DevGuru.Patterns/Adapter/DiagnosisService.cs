@@ -17,7 +17,7 @@ namespace DevGuru.Patterns.Adapter
 
             Console.WriteLine("\tReport:");
             Console.WriteLine("\tDoctors report: " + GetDoctorsConclusion());
-            Console.WriteLine("\tX-ray information:" + "\n\t\t" + legacyXRayService.Analyze());
+            Console.WriteLine("\tX-ray information:" + "\n\t" + legacyXRayService.Analyze());
         }
 
         private static string GetDoctorsConclusion()
