@@ -1,12 +1,14 @@
-﻿namespace DevGuru.Patterns.ChainOfResponsibility
+﻿using DevGuru.Core;
+
+namespace DevGuru.Patterns.ChainOfResponsibility
 {
     public class ChainOfResponsibilityPattern : BasePattern
     {
         public override string Name => "Chain Of Responsibility";
+        protected override string DescriptionFormatted => "\t[Passes a request along a chain of handlers, each processing the request or passing it]\n\t[to the next handler in the chain, providing a way to decouple senders and receivers.]\n";
+        protected override string IdeaFormatted => "\t[A user can have Bank, Revolut and PayPal payment systems.]\n\t[The payment method is selected by the priority: Bank -> Revolut -> PayPal.]\n";
 
-        public override string IdeaFormatted => "\t[A user can have Bank, Revolut and PayPal payment systems.]\n\t[The payment method is selected by the priority: Bank -> Revolut -> PayPal.]\n";
-
-        public override void RunCore()
+        protected override void RunCore()
         {
             var paymentService = new PaymentService();
 

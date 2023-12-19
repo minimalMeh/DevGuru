@@ -1,11 +1,14 @@
-﻿namespace DevGuru.Patterns.Adapter
+﻿using DevGuru.Core;
+
+namespace DevGuru.Patterns.Adapter
 {
     public class AdapterPattern : BasePattern
     {
         public override string Name => "Adapter";
-        public override string IdeaFormatted => "\t[Modern Diagnosis service that prints doctor's report]\n\t[but has a dependency on the legacy XRay service]\n";
+        protected override string DescriptionFormatted => "\t[Allows the interface of an existing class to be used as another interface,]\n\t[facilitating the collaboration between incompatible interfaces.]\n";
+        protected override string IdeaFormatted => "\t[Modern Diagnosis service that prints doctor's report]\n\t[but has a dependency on the legacy XRay service]\n";
 
-        public override void RunCore()
+        protected override void RunCore()
         {
             IDiagnosisService adapter = new DiagnosisService(new LegacyXRayService("HighSpeedXRay"));
             adapter.PrintReport();

@@ -1,13 +1,15 @@
-﻿using System;
+﻿using DevGuru.Core;
+using System;
 
 namespace DevGuru.Patterns.Builder
 {
     public class BuilderPattern : BasePattern
     {
         public override string Name => "Builder";
-        public override string IdeaFormatted => "\t[Bakery can produce different products.]\n\t[Specify the concrete product ingredients builder.]\n";
+        protected override string DescriptionFormatted => "\t[Separates the construction of a complex object from its representation,]\n\t[allowing the same construction process to create different representations.]\n";
+        protected override string IdeaFormatted => "\t[Bakery can produce different products.]\n\t[Specify the concrete product ingredients builder.]\n";
 
-        public override void RunCore()
+        protected override void RunCore()
         {
             var cBuilder = new CroissantBuilder();
             Bakery.Bake(cBuilder);

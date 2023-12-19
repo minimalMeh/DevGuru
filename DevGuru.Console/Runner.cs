@@ -4,6 +4,7 @@ using DevGuru.Patterns.Adapter;
 using DevGuru.Patterns.Bridge;
 using DevGuru.Patterns.Builder;
 using DevGuru.Patterns.ChainOfResponsibility;
+using DevGuru.Patterns.Command;
 
 namespace DevGuru.Console
 {
@@ -35,6 +36,7 @@ namespace DevGuru.Console
                     "bridge" => new BridgePattern(),
                     "builder" or "bldr" => new BuilderPattern(),
                     "cor" or "chain of responsibility" or "chain" or "responsibility" or "chainofresponsibility" => new ChainOfResponsibilityPattern(),
+                    "command" or "cmd" => new CommandPattern(),
                     _ => null
                 };
 
@@ -151,13 +153,6 @@ namespace DevGuru.Console
 
             //editor.History.Redo();
             //editor.Execute(new ChangeTextCommand(editor, "Dasha stop."));
-
-            // Command
-            //var tv = new TV();
-            //var tvCommand = new TVPowerCommand(tv);
-            //var remote = new TVRemote(tvCommand);
-            //remote.TurnOnTV();
-            //remote.TurnOffTV();
 
             // Mediator
             //var manager = new ManagerMediator();

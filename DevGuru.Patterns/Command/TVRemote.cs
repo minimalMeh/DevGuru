@@ -3,7 +3,7 @@
     // Invoker
     public class TVRemote
     {
-        ICommand command;
+        readonly ICommand command;
 
         public TVRemote(ICommand command)
         {

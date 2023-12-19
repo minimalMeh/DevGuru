@@ -6,6 +6,7 @@
 
         public TVPowerCommand(TV receiver)
         {
+
             this.receiver = receiver;
         }
 
