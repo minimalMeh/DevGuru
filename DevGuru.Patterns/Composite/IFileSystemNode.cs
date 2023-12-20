@@ -3,9 +3,8 @@
     public interface IFileSystemNode
     {
         string Name { get; }
-
         int GetSize();
         bool IsComposite();
-        void Add(IFileSystemNode node);
+        void Print();
     }
 }

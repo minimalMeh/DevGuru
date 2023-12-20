@@ -5,6 +5,7 @@ using DevGuru.Patterns.Bridge;
 using DevGuru.Patterns.Builder;
 using DevGuru.Patterns.ChainOfResponsibility;
 using DevGuru.Patterns.Command;
+using DevGuru.Patterns.Compose;
 
 namespace DevGuru.Console
 {
@@ -37,6 +38,7 @@ namespace DevGuru.Console
                     "builder" or "bldr" => new BuilderPattern(),
                     "cor" or "chain of responsibility" or "chain" or "responsibility" or "chainofresponsibility" => new ChainOfResponsibilityPattern(),
                     "command" or "cmd" => new CommandPattern(),
+                    "composite" or "compose" or "compositor" => new CompositePattern(),
                     _ => null
                 };
 

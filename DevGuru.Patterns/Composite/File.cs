@@ -1,5 +1,9 @@
-﻿namespace DevGuru.Patterns.Compose
+﻿using System;
+using System.Diagnostics;
+
+namespace DevGuru.Patterns.Compose
 {
+    [DebuggerDisplay("Name: {Name}, Size = {GetSize()}")]
     public class File : IFileSystemNode
     {
         private readonly int size;
@@ -16,6 +20,9 @@
 
         public bool IsComposite() => false;
 
-        public void Add(IFileSystemNode node) { }
+        public void Print()
+        {
+            Console.Write($" File: {Name} ");
+        }
     }
 }
