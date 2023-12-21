@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using System.Text;
 
 namespace DevGuru.Patterns.Decorator
@@ -7,7 +8,7 @@ namespace DevGuru.Patterns.Decorator
     public class FileDataSource : IDataSource // Concrete Component
     {
         private readonly string fileName;
-        private string Path => System.IO.Path.Combine(@"D:\Projects\DevGuru\DevGuru.Core\Decorator", fileName);
+        private string Path => System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Decorator", fileName);
 
         public FileDataSource(string fileName)
         {
@@ -18,6 +19,7 @@ namespace DevGuru.Patterns.Decorator
         {
             try
             {
+                Console.WriteLine($"{nameof(FileDataSource)} Reading the file.");
                 using StreamReader sr = File.OpenText(Path);
                 return sr.ReadToEnd();
             }
@@ -32,7 +34,7 @@ namespace DevGuru.Patterns.Decorator
         {
             try
             {
-                Console.WriteLine($"Writing :\"{data}\" to the file.");
+                Console.WriteLine($"{nameof(FileDataSource)} Writing [\"{data}\"] to the file.");
                 using FileStream fs = File.Create(Path);
                 var info = new UTF8Encoding(true).GetBytes(data);
                 fs.Write(info, 0, info.Length);

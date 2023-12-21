@@ -7,7 +7,7 @@ namespace DevGuru.Patterns.Compose
     {
         public override string Name => "Composite";
         protected override string DescriptionFormatted => "\t[Composes objects into tree structures to represent part-whole hierarchies,]\n\t[allowing clients to treat individual objects and compositions of objects uniformly.]\n";
-        protected override string IdeaFormatted => "\t[FileSystem can contain either a file or a folder.]";
+        protected override string IdeaFormatted => "\t[FileSystem can contain either a file or a folder.]\n";
 
         protected override void RunCore()
         {

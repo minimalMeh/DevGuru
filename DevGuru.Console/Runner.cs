@@ -6,6 +6,7 @@ using DevGuru.Patterns.Builder;
 using DevGuru.Patterns.ChainOfResponsibility;
 using DevGuru.Patterns.Command;
 using DevGuru.Patterns.Compose;
+using DevGuru.Patterns.Decorator;
 
 namespace DevGuru.Console
 {
@@ -39,6 +40,7 @@ namespace DevGuru.Console
                     "cor" or "chain of responsibility" or "chain" or "responsibility" or "chainofresponsibility" => new ChainOfResponsibilityPattern(),
                     "command" or "cmd" => new CommandPattern(),
                     "composite" or "compose" or "compositor" => new CompositePattern(),
+                    "decorator" or "decor" => new DecoratorPattern(),
                     _ => null
                 };
 
@@ -92,18 +94,6 @@ namespace DevGuru.Console
             //Rectangle bcopy = benchmark.Clone() as Rectangle;
             //Console.WriteLine(bcopy);
             //Console.WriteLine($"Check links\nbenchmark and copy: {benchmark == bcopy}\nbenchmark string: {benchmark.rectangleName == bcopy.rectangleName}\n{object.ReferenceEquals(benchmark.rectangleName, bcopy.rectangleName)}");
-
-
-            // Decorator
-            //string salary = "Name, Salary\nJohn, 1000\nLida, 2000\n";
-            //DataSourceDecorator withEncryption = new EncryptionDecorator(
-            //    new FileDataSource("test.txt"));
-
-            //withEncryption.Write(salary);
-
-            //var plainFileDataSource = new FileDataSource("test.txt");
-            //Console.WriteLine("Plain file read: \n" + plainFileDataSource.Read());
-            //Console.WriteLine("Decorator file read: \n" + withEncryption.Read());
 
             // Proxy
             //var proxy = new YouTubeCacheProxy();
@@ -190,23 +180,6 @@ namespace DevGuru.Console
             //ba.Print();
             //tu.Print();
             //rs.Print();
-
-            // Compose
-            //var compose = new FileSystem();
-            //var root = new Folder("C:");
-            //var folderA = new Folder("Alpha");
-            //compose.Add(root, folderA);
-            //var fileA = new File("Apartments.doc", 124);
-            //compose.Add(folderA, fileA);
-            //var folderB = new Folder("Beta");
-            //compose.Add(root, folderB);
-            //compose.Add(folderB, new File("Bye", 1064));
-            //var fileB1 = new File("Bike.img", 300);
-            //compose.Add(folderB, fileB1);
-            //var fileR = new File("RootFile.db", 20000);
-            //compose.Add(root, fileR);
-            //Console.WriteLine(compose.GetSize(root));
-
 
             // Factory method
             //var dialogService = new DialogService();

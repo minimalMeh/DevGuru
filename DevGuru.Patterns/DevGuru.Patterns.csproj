@@ -12,4 +12,10 @@
     <ProjectReference Include="..\DevGuru.Core\DevGuru.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Decorator\test.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
