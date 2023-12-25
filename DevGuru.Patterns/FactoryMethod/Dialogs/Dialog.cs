@@ -8,7 +8,7 @@ namespace DevGuru.Patterns.FactoryMethod.Dialogs
         public void Render()
         {
             var button = CreateButton();
-            button.OnClick(() => Console.WriteLine("It's ok bro to be sad."));
+            button.OnClick(() => Console.WriteLine("Callback function after click is executed."));
             button.Render();
         }
 

@@ -12,7 +12,7 @@ namespace DevGuru.Core
 
         public void Run()
         {
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("/------------------------------------------------\\");
 
             ConsoleOutputIntroduction();
 
@@ -20,7 +20,7 @@ namespace DevGuru.Core
 
             RunCore();
 
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("\\------------------------------------------------/\n");
         }
 
         private void ConsoleOutputIntroduction()

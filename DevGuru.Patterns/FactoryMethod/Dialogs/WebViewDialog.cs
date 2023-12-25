@@ -5,9 +5,6 @@ namespace DevGuru.Patterns.FactoryMethod.Dialogs
 {
     public class WebViewDialog : Dialog
     {
-        protected override IOkButton CreateButton()
-        {
-            return new WebViewButton();
-        }
+        protected override IOkButton CreateButton() => new WebViewButton();
     }
 }

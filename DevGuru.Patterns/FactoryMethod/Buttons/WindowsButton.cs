@@ -7,13 +7,13 @@ namespace DevGuru.Patterns.FactoryMethod.Buttons
     {
         public void OnClick(Action callback)
         {
-            Console.WriteLine("Windows button clicked.");
+            Console.WriteLine("Windows button is clicked.");
             callback();
         }
 
         public void Render()
         {
-            Console.WriteLine("Windows button rendered.");
+            Console.WriteLine("Windows button is rendered.");
         }
     }
 }

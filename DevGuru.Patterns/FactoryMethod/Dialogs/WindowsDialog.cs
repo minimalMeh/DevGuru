@@ -5,9 +5,6 @@ namespace DevGuru.Patterns.FactoryMethod.Dialogs
 {
     public class WindowsDialog : Dialog
     {
-        protected override IOkButton CreateButton()
-        {
-            return new WindowsButton();
-        }
+        protected override IOkButton CreateButton() => new WindowsButton();
     }
 }

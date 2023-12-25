@@ -9,7 +9,7 @@ namespace DevGuru.Patterns.FactoryMethod
 
         public void Initialize(string configuration)
         {
-            if (configuration.Equals("Windows", StringComparison.OrdinalIgnoreCase))
+            if (configuration.Equals("Win", StringComparison.OrdinalIgnoreCase))
             {
                 dialog = new WindowsDialog();
             }
@@ -19,14 +19,13 @@ namespace DevGuru.Patterns.FactoryMethod
             }
             else
             {
-                Console.WriteLine("Invalid configuration. please specify windows or mac");
-                return;
+                Console.WriteLine("Invalid configuration. Please specify Win or Web.");
             }
         }
 
         public void Render()
         {
-            dialog.Render();
+            dialog?.Render();
         }
     }
 }

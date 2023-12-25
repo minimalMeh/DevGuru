@@ -7,13 +7,13 @@ namespace DevGuru.Patterns.FactoryMethod.Buttons
     {
         public void OnClick(Action callback)
         {
-            Console.WriteLine("WebView button clicked.");
+            Console.WriteLine("WebView button is clicked.");
             callback();
         }
 
         public void Render()
         {
-            Console.WriteLine("WebView button rendered.");
+            Console.WriteLine("WebView button is rendered.");
         }
     }
 }

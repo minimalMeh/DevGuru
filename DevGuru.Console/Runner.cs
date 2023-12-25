@@ -7,6 +7,8 @@ using DevGuru.Patterns.ChainOfResponsibility;
 using DevGuru.Patterns.Command;
 using DevGuru.Patterns.Compose;
 using DevGuru.Patterns.Decorator;
+using DevGuru.Patterns.Facade;
+using DevGuru.Patterns.FactoryMethod;
 
 namespace DevGuru.Console
 {
@@ -19,8 +21,8 @@ namespace DevGuru.Console
 
             while (true)
             {
-                System.Console.Write("Specify pattern name: ");
-                var patternName = System.Console.ReadLine()?.ToLower();
+                System.Console.Write("Specify the pattern's name: ");
+                var patternName = System.Console.ReadLine()?.ToLower().Trim();
 
                 if (string.IsNullOrWhiteSpace(patternName))
                     continue;
@@ -41,10 +43,19 @@ namespace DevGuru.Console
                     "command" or "cmd" => new CommandPattern(),
                     "composite" or "compose" or "compositor" => new CompositePattern(),
                     "decorator" or "decor" => new DecoratorPattern(),
+                    "facade" => new FacadePattern(),
+                    "factory method" => new FactoryMethodPattern(),
                     _ => null
                 };
 
-                pattern?.Run();
+                if (pattern == null)
+                {
+                    System.Console.WriteLine("No such pattern found.");
+                }
+                else
+                {
+                    pattern?.Run();
+                }
             }
 
             // Singleton 
@@ -157,8 +168,6 @@ namespace DevGuru.Console
             //Thread.Sleep(1000);
             //executor.Send("Here is a new release");
 
-            // Facade (фасАаад)
-            //Client.Operation(new Facade(new Subsystem1(), new Subsystem2()));
 
             // Observer not C# sample, just observer, TODO: adequate c# event 
             //var ib = new InternetBilet();
@@ -180,19 +189,6 @@ namespace DevGuru.Console
             //ba.Print();
             //tu.Print();
             //rs.Print();
-
-            // Factory method
-            //var dialogService = new DialogService();
-            //dialogService.Initialize("windows");
-            //dialogService.Render();
-            //dialogService.Initialize("web");
-            //dialogService.Render();
-
-            // Abstract factory
-            //GUIService.SimulateGUI("windows");
-            //GUIService.SimulateGUI("goofy");
-            //GUIService.SimulateGUI("mac");
-
 
             // State
             //var context = new Curriculum(new BegginerLevel(), "Math");
