@@ -1,4 +1,6 @@
-﻿namespace DevGuru.Patterns.Flyweight.Entities
+﻿using System;
+
+namespace DevGuru.Patterns.Flyweight.Entities
 {
     public class House
     {
@@ -12,6 +14,8 @@
             this.x = x;
             this.y = y;
             Layout = layout;
+
+            Console.WriteLine($"The {nameof(House)} with [{Layout.Type}] {nameof(HouseLayout)} is created; ({Layout.Size} Mb)");
         }
 
         public void Draw()

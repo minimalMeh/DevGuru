@@ -1,14 +1,15 @@
 ﻿using DevGuru.Patterns.Flyweight.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace DevGuru.Patterns.Flyweight
 {
     public class Location
     {
-        private readonly List<House> houses = new List<House>();
-        private readonly HouseFactory houseFactory = new HouseFactory();
+        private readonly List<House> houses = new();
+        private readonly HouseFactory houseFactory = new();
 
-        public void BuildHouse(int x, int y, string layout)
+        public void PlaceHouse(int x, int y, string layout)
         {
             var houseLayout = houseFactory.Get(layout);
             var house = new House(x, y, houseLayout);
@@ -18,6 +19,7 @@ namespace DevGuru.Patterns.Flyweight
 
         public void DrawHouses()
         {
+            Console.WriteLine("\nDraw houses on the map...");
             houses.ForEach(h => h.Draw());
         }
     }

@@ -9,6 +9,7 @@ using DevGuru.Patterns.Compose;
 using DevGuru.Patterns.Decorator;
 using DevGuru.Patterns.Facade;
 using DevGuru.Patterns.FactoryMethod;
+using DevGuru.Patterns.Flyweight;
 
 namespace DevGuru.Console
 {
@@ -45,6 +46,7 @@ namespace DevGuru.Console
                     "decorator" or "decor" => new DecoratorPattern(),
                     "facade" => new FacadePattern(),
                     "factory method" => new FactoryMethodPattern(),
+                    "fly" or "flyweight" => new FlyweightPattern(),
                     _ => null
                 };
 
@@ -244,21 +246,6 @@ namespace DevGuru.Console
 
             //charSortMachine.SetStrategy(new BubbleSort<char>());
             //charSortMachine.Sort(array3);
-
-            // FlyWeight
-            //var location = new Location();
-
-            //location.BuildHouse(0, 0, HouseLayoutType._1_201_6);
-            //location.BuildHouse(0, 10, HouseLayoutType._1_201_12);
-            //location.BuildHouse(0, 20, HouseLayoutType._1_201_13);
-            //location.BuildHouse(0, 30, HouseLayoutType._1_201_6);
-            //location.BuildHouse(0, 40, HouseLayoutType._1_207_7_Dormitory);
-            //location.BuildHouse(10, 0, HouseLayoutType._1_207_7_Dormitory);
-            //location.BuildHouse(20, 10, HouseLayoutType._1_207_7_Dormitory);
-            //location.BuildHouse(30, 20, HouseLayoutType._1_207_7_Dormitory);
-            //location.BuildHouse(40, 30, HouseLayoutType._1_201_6);
-
-            //location.DrawHouses();
         }
     }
 }

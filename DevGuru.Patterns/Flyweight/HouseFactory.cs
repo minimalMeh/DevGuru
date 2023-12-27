@@ -6,7 +6,7 @@ namespace DevGuru.Patterns.Flyweight
 {
     public class HouseFactory
     {
-        private readonly Lazy<Dictionary<string, HouseLayout>> houseLayouts = new Lazy<Dictionary<string, HouseLayout>>();
+        private readonly Lazy<Dictionary<string, HouseLayout>> houseLayouts = new();
 
         private Dictionary<string, HouseLayout> HouseLayouts { get => houseLayouts.Value; }
 
@@ -18,9 +18,9 @@ namespace DevGuru.Patterns.Flyweight
             {
                 houseLayout = new HouseLayout(layout);
                 HouseLayouts.Add(layout, houseLayout);
+                Console.WriteLine($"Generating HouseLayout [{layout}]...");
             }
 
-            Console.WriteLine($"Returned HouseLayout with type: {layout}");
             return houseLayout;
         }
     }
