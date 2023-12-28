@@ -2,19 +2,13 @@
 {
     public class ManagerMediator : Mediator
     {
-        public CustomerColleague Customer { get; set; }
-        public SubordinateColleague Executor { get; set; }
+        public Customer Customer { get; set; }
+        public Employee Employee { get; set; }
 
-        public override void Send(string msg, Colleague colleague)
+        public override void Send(string message, Colleague colleague)
         {
-            if (colleague == Customer)
-            {
-                Executor.Notify(msg);
-            }
-            else if (colleague == Executor)
-            {
-                Customer.Notify(msg);
-            }
+            Colleague rec = colleague == Customer ? Customer : Employee;
+            rec?.Notify(message);
         }
     }
 }

@@ -11,6 +11,7 @@ using DevGuru.Patterns.Facade;
 using DevGuru.Patterns.FactoryMethod;
 using DevGuru.Patterns.Flyweight;
 using DevGuru.Patterns.Iterator;
+using DevGuru.Patterns.Mediator;
 
 namespace DevGuru.Console
 {
@@ -49,6 +50,7 @@ namespace DevGuru.Console
                     "factory method" => new FactoryMethodPattern(),
                     "fly" or "flyweight" => new FlyweightPattern(),
                     "iterator" => new IteratorPattern(),
+                    "mediator" => new MediatorPattern(),
                     _ => null
                 };
 
@@ -137,18 +139,6 @@ namespace DevGuru.Console
 
             //editor.History.Redo();
             //editor.Execute(new ChangeTextCommand(editor, "Dasha stop."));
-
-            // Mediator
-            //var manager = new ManagerMediator();
-            //var executor = new SubordinateColleague(manager);
-            //var customer = new CustomerColleague(manager);
-            //manager.Customer = customer;
-            //manager.Executor = executor;
-
-            //customer.Send("I want a new release");
-            //Thread.Sleep(1000);
-            //executor.Send("Here is a new release");
-
 
             // Observer not C# sample, just observer, TODO: adequate c# event 
             //var ib = new InternetBilet();
