@@ -21,7 +21,6 @@
 
         public override bool MoveNext()
         {
-
             int updatedPosition = position + (reverse ? -1 : 1);
 
             if (updatedPosition >= 0 && updatedPosition < wordsCollection.Count)

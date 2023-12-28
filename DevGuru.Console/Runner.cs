@@ -10,6 +10,7 @@ using DevGuru.Patterns.Decorator;
 using DevGuru.Patterns.Facade;
 using DevGuru.Patterns.FactoryMethod;
 using DevGuru.Patterns.Flyweight;
+using DevGuru.Patterns.Iterator;
 
 namespace DevGuru.Console
 {
@@ -47,6 +48,7 @@ namespace DevGuru.Console
                     "facade" => new FacadePattern(),
                     "factory method" => new FactoryMethodPattern(),
                     "fly" or "flyweight" => new FlyweightPattern(),
+                    "iterator" => new IteratorPattern(),
                     _ => null
                 };
 
@@ -77,29 +79,6 @@ namespace DevGuru.Console
 
             //var exportVisitor = new XmlExportVisitor();
             //Console.WriteLine(exportVisitor.Export(dot, dot2, dot3, circle, dot4));
-
-            // Iterator
-            //var collection = new WordsCollection
-            //{
-            //    "First",
-            //    "Second",
-            //    "Third"
-            //};
-
-            //foreach(var element in collection)
-            //{
-            //    Console.WriteLine(element);
-            //}
-
-            //Console.WriteLine("Reverse");
-
-            //collection.Reverse();
-
-            //foreach (var element in collection)
-            //{
-            //    Console.WriteLine(element);
-            //}
-
 
             // Prototype
             //var benchmark = new Rectangle(10, 20, 200, 300);

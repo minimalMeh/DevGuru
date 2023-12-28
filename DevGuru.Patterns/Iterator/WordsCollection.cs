@@ -4,7 +4,7 @@ namespace DevGuru.Patterns.Iterator
 {
     public class WordsCollection : IteratorAggregate
     {
-        private List<string> collection = new List<string>();
+        private readonly List<string> collection = new();
         private bool direction = false;
 
         public int Count { get => collection.Count; }
@@ -15,6 +15,6 @@ namespace DevGuru.Patterns.Iterator
 
         public override IEnumerator<string> GetEnumerator() => new AlphabeticalOrderIterator(this, direction);
 
-        public void Reverse() => direction = true;
+        public void Reverse() => direction = !direction;
     }
 }

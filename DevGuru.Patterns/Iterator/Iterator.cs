@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace DevGuru.Patterns.Iterator
@@ -11,7 +12,7 @@ namespace DevGuru.Patterns.Iterator
 
         public void Dispose()
         {
-
+            GC.SuppressFinalize(this);
         }
 
         public abstract bool MoveNext();
