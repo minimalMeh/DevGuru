@@ -5,7 +5,7 @@ namespace DevGuru.Patterns.Memento
 {
     public class History // Caretaker
     {
-        private readonly List<(ICommand, Snapshot)> history = new List<(ICommand, Snapshot)>();
+        private readonly List<(ICommand, Snapshot)> history = new();
         private int virtualPointer;
 
         public void Push(ICommand command, Snapshot snapshot)
@@ -23,7 +23,7 @@ namespace DevGuru.Patterns.Memento
         {
             if (virtualPointer == 0)
             {
-                Console.WriteLine("Can't move back, history is over.");
+                Console.WriteLine("Can't move back, the history is empty.");
                 return false;
             }
 
@@ -31,7 +31,7 @@ namespace DevGuru.Patterns.Memento
             history[virtualPointer - 1].Item2.Restore();
             virtualPointer--;
 
-            Console.WriteLine($"Moved back. {item.Item1}, date added: {item.Item2.GetSnapshotDate()}");
+            Console.WriteLine($"Moved back. Undo [{item.Item1}, date performed {item.Item2.GetSnapshotDate()}]");
             return true;
         }
 
@@ -43,11 +43,11 @@ namespace DevGuru.Patterns.Memento
 
                 history[virtualPointer].Item2.Restore();
                 virtualPointer++;
-                Console.WriteLine($"Moved forward. {item.Item1} date added: {item.Item2.GetSnapshotDate()}");
+                Console.WriteLine($"Moved forward. Redo [{item.Item1}, date performed {item.Item2.GetSnapshotDate()}]");
                 return true;
             }
 
-            Console.WriteLine("Can't move forward, history is over.");
+            Console.WriteLine("Can't move forward, no following actions.");
             return false;
         }
     }

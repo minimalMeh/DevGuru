@@ -4,7 +4,8 @@
     {
         private string text;
         private int curX, curY;
-        public History History { get; private set; } = new History();
+
+        public History History { get; } = new History();
 
         public void SetText(string text)
         {
@@ -23,6 +24,6 @@
             command.Execute();
         }
 
-        public Snapshot CreateSnapshot() => new Snapshot(this, text, curX, curY);
+        public Snapshot CreateSnapshot() => new(this, text, curX, curY);
     }
 }

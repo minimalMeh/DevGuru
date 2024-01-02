@@ -15,12 +15,12 @@
         public void Execute()
         {
             editor.SetCursor(curX, curY);
-            System.Console.WriteLine($"Executed {this}");
+            System.Console.WriteLine($"Executed {nameof(MovePointerCommand)}: (X: {curX}, Y: {curY}).");
         }
 
         public override string ToString()
         {
-            return $"{GetType().Name} moves X: \"{curX}\", moves Y: \"{curY}\"";
+            return $"{nameof(MovePointerCommand)} set the coordinates to (X: {curX}, Y: {curY}).";
         }
     }
 }

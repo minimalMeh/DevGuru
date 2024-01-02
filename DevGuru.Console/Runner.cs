@@ -12,6 +12,7 @@ using DevGuru.Patterns.FactoryMethod;
 using DevGuru.Patterns.Flyweight;
 using DevGuru.Patterns.Iterator;
 using DevGuru.Patterns.Mediator;
+using DevGuru.Patterns.Memento;
 
 namespace DevGuru.Console
 {
@@ -51,6 +52,7 @@ namespace DevGuru.Console
                     "fly" or "flyweight" => new FlyweightPattern(),
                     "iterator" => new IteratorPattern(),
                     "mediator" => new MediatorPattern(),
+                    "memento" => new MementoPattern(),
                     _ => null
                 };
 
@@ -117,28 +119,6 @@ namespace DevGuru.Console
 
             //video = proxy.GetVideo("turtle");
             //Console.WriteLine(video);
-
-            // Memento + Command
-            //var editor = new Editor();
-            //editor.Execute(new ChangeTextCommand(editor, "Welcome!"));
-            //editor.Execute(new ChangeTextCommand(editor, "Log in"));
-            //editor.Execute(new MovePointerCommand(editor, 100, 100));
-
-            //editor.History.Undo();
-            //editor.History.Undo();
-            //editor.History.Redo();
-
-            //editor.Execute(new ChangeTextCommand(editor, "Try again?"));
-            //editor.Execute(new MovePointerCommand(editor, 200, 250));
-            //editor.History.Redo();
-            //editor.History.Undo();
-            //editor.History.Undo();
-            //editor.History.Undo();
-            //editor.History.Undo();
-            //editor.History.Undo();
-
-            //editor.History.Redo();
-            //editor.Execute(new ChangeTextCommand(editor, "Dasha stop."));
 
             // Observer not C# sample, just observer, TODO: adequate c# event 
             //var ib = new InternetBilet();

@@ -14,12 +14,12 @@
         public void Execute()
         {
             editor.SetText(text);
-            System.Console.WriteLine($"Executed {this}");
+            System.Console.WriteLine($"Executed {nameof(ChangeTextCommand)}: \"{text}\".");
         }
 
         public override string ToString()
         {
-            return $"{GetType().Name} to text \"{text}\"";
+            return $"{nameof(ChangeTextCommand)} set the \"{text}\".";
         }
     }
 }
