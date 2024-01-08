@@ -13,20 +13,20 @@ namespace DevGuru.Patterns.Observer.Classic.Subscribers
             FollowingEvents.Add(@event as ISienceEvent);
         }
 
-        public override void Print()
+        public override void PrintEventsSchedule()
         {
-            Console.WriteLine("\t\t\tTECHNICAL UNIVERSITY AFFICHE");
+            Console.WriteLine("\t\t[TECHNICAL UNIVERSITY AFFICHE]");
 
             if (FollowingEvents.Count == 0)
             {
-                Console.WriteLine("\t\t\tNo events.");
+                Console.WriteLine("\t\tNo events yet.");
                 return;
             }
 
             foreach (var e in FollowingEvents)
             {
-                Console.WriteLine($"\t\tDate: {e.StartDateTime.ToLocalTime().ToLongDateString()}");
-                Console.WriteLine($"\t\tLocation: {e.Location}");
+                Console.WriteLine($"\t\t[Date: {e.StartDateTime.ToLocalTime().ToLongDateString()}]");
+                Console.WriteLine($"\t\t[Location: {e.Location}]");
             };
 
             Console.WriteLine();

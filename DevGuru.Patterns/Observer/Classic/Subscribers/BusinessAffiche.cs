@@ -13,22 +13,25 @@ namespace DevGuru.Patterns.Observer.Classic.Subscribers
             FollowingEvents.Add(@event as IBusinessEvent);
         }
 
-        public override void Print()
+        public override void PrintEventsSchedule()
         {
-            Console.WriteLine("\t\t\tSUCCESS AFFICHE");
+            Console.WriteLine("\t\t_________________");
+            Console.WriteLine("\t\tBUSINESS AFFICHE:");
 
             if (FollowingEvents.Count == 0)
             {
-                Console.WriteLine("\t\t\tNo events.");
+                Console.WriteLine("\t\tNo events yet.");
                 return;
             }
 
             foreach (var e in FollowingEvents)
             {
-                Console.WriteLine($"\t\tDate: {e.StartDateTime.ToLocalTime().ToLongDateString()}");
-                Console.WriteLine($"\t\tQ&A Session: {e.QASessionDateTime.ToLocalTime().ToLongDateString()}");
+                Console.WriteLine("\t\t###");
+                Console.WriteLine($"\t\t[Date: {e.StartDateTime.ToLocalTime().ToLongDateString()}]");
+                Console.WriteLine($"\t\t[Q&A Session: {e.QASessionDateTime.ToLocalTime().ToLongDateString()} {e.QASessionDateTime.ToLocalTime().ToLongTimeString()}]");
             };
 
+            Console.WriteLine("\t\t_________________");
             Console.WriteLine();
         }
     }

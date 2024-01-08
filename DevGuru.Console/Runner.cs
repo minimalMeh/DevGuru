@@ -13,6 +13,7 @@ using DevGuru.Patterns.Flyweight;
 using DevGuru.Patterns.Iterator;
 using DevGuru.Patterns.Mediator;
 using DevGuru.Patterns.Memento;
+using DevGuru.Patterns.Observer;
 
 namespace DevGuru.Console
 {
@@ -53,6 +54,7 @@ namespace DevGuru.Console
                     "iterator" => new IteratorPattern(),
                     "mediator" => new MediatorPattern(),
                     "memento" => new MementoPattern(),
+                    "observer" => new ObserverPattern(),
                     _ => null
                 };
 
@@ -119,27 +121,6 @@ namespace DevGuru.Console
 
             //video = proxy.GetVideo("turtle");
             //Console.WriteLine(video);
-
-            // Observer not C# sample, just observer, TODO: adequate c# event 
-            //var ib = new InternetBilet();
-            //var ba = new BusinessAffiche();
-            //var tu = new TechnicalUniversity();
-            //var rs = new RobotsSchool();
-
-            //var eventMan = new EventManager();
-            //eventMan.AttachAllEventsListener(ib);
-            //eventMan.AttachBusinessListener(ba);
-            //eventMan.AttachSienceListener(tu);
-            //eventMan.AttachSienceListener(rs);
-
-            //eventMan.AddBusinessEnvent(new BusinessEvent(DateTime.UtcNow, DateTime.UtcNow));
-            //eventMan.AddSienceEnvent(new SienceEvent(DateTime.UtcNow, "Park Gorkogo"));
-            //eventMan.AddSienceEnvent(new SienceEvent(DateTime.UtcNow, "Jellyfish museum"));
-
-            //ib.Print();
-            //ba.Print();
-            //tu.Print();
-            //rs.Print();
 
             // State
             //var context = new Curriculum(new BegginerLevel(), "Math");

@@ -7,9 +7,9 @@ namespace DevGuru.Patterns.Observer.Classic
 {
     public class EventManager
     {
-        private readonly List<Subscriber> sienceListeners = new List<Subscriber>();
-        private readonly List<Subscriber> businessListeners = new List<Subscriber>();
-        private readonly List<Subscriber> allEventsListeners = new List<Subscriber>();
+        private readonly List<Subscriber> sienceListeners = new();
+        private readonly List<Subscriber> businessListeners = new();
+        private readonly List<Subscriber> allEventsListeners = new();
 
         public void AttachSienceListener(Subscriber observer)
         {

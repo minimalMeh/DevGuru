@@ -13,35 +13,22 @@ namespace DevGuru.Patterns.Observer.Classic.Subscribers
             FollowingEvents.Add(@event);
         }
 
-        public override void Print()
+        public override void PrintEventsSchedule()
         {
-            Console.WriteLine("\t\t\tINTERNET BILET");
+            Console.WriteLine("\t\t!!!INTERNET BILET!!!");
 
             if (FollowingEvents.Count == 0)
             {
-                Console.WriteLine("\t\t\tNo events.");
+                Console.WriteLine("\t\tNo local events yet.");
                 return;
             }
 
             foreach (var e in FollowingEvents)
             {
-                Console.WriteLine($"\t\tDate of the {GetEventType(e)} event: {e.StartDateTime.ToLocalTime().ToLongDateString()}");
+                Console.WriteLine($"\t\t| Date of the {e.GetType().Name} event: {e.StartDateTime.ToLocalTime().ToLongDateString()} {e.StartDateTime.ToLocalTime().ToLongTimeString()} |");
             };
 
             Console.WriteLine();
-        }
-
-        private string GetEventType(IEvent @event)
-        {
-            if (@event is IBusinessEvent)
-            {
-                return "Business";
-            }
-            if (@event is ISienceEvent)
-            {
-                return "Sience";
-            }
-            return null;
         }
     }
 }

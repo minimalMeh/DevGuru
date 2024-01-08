@@ -13,10 +13,10 @@ namespace DevGuru.Patterns.Observer.Classic.Subscribers
             FollowingEvents.Add(@event as ISienceEvent);
         }
 
-        public override void Print()
+        public override void PrintEventsSchedule()
         {
-            Console.WriteLine("\t\t\tRobots school suggests joining:");
-            FollowingEvents.ForEach(e => Console.WriteLine($"\t\t{e.Location} in {e.StartDateTime.ToLocalTime()}"));
+            Console.WriteLine("\t\t< Our Robots school suggests you joining these events :) >");
+            FollowingEvents.ForEach(e => Console.WriteLine($"\t\t<{e.Location} in {e.StartDateTime.ToLocalTime()}>"));
             Console.WriteLine();
         }
     }

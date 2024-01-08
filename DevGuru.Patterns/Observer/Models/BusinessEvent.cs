@@ -5,14 +5,13 @@ namespace DevGuru.Patterns.Observer.Models
 {
     public class BusinessEvent : IBusinessEvent
     {
-        public BusinessEvent(DateTime startDateTime, DateTime afterPartyDateTime)
+        public DateTime QASessionDateTime { get; set; }
+        public DateTime StartDateTime { get; set; }
+
+        public BusinessEvent(DateTime startDateTime, DateTime qaSessionStartDateTime)
         {
-            QASessionDateTime = afterPartyDateTime;
+            QASessionDateTime = qaSessionStartDateTime;
             StartDateTime = startDateTime;
         }
-
-        public DateTime QASessionDateTime { get; set; }
-
-        public DateTime StartDateTime { get; set; }
     }
 }
