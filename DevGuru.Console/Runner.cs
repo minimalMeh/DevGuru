@@ -14,6 +14,7 @@ using DevGuru.Patterns.Iterator;
 using DevGuru.Patterns.Mediator;
 using DevGuru.Patterns.Memento;
 using DevGuru.Patterns.Observer;
+using DevGuru.Patterns.Prototype;
 
 namespace DevGuru.Console
 {
@@ -55,6 +56,7 @@ namespace DevGuru.Console
                     "mediator" => new MediatorPattern(),
                     "memento" => new MementoPattern(),
                     "observer" => new ObserverPattern(),
+                    "prototype" or "proto" => new PrototypePattern(),
                     _ => null
                 };
 
@@ -85,13 +87,6 @@ namespace DevGuru.Console
 
             //var exportVisitor = new XmlExportVisitor();
             //Console.WriteLine(exportVisitor.Export(dot, dot2, dot3, circle, dot4));
-
-            // Prototype
-            //var benchmark = new Rectangle(10, 20, 200, 300);
-            //Console.WriteLine(benchmark);
-            //Rectangle bcopy = benchmark.Clone() as Rectangle;
-            //Console.WriteLine(bcopy);
-            //Console.WriteLine($"Check links\nbenchmark and copy: {benchmark == bcopy}\nbenchmark string: {benchmark.rectangleName == bcopy.rectangleName}\n{object.ReferenceEquals(benchmark.rectangleName, bcopy.rectangleName)}");
 
             // Proxy
             //var proxy = new YouTubeCacheProxy();
