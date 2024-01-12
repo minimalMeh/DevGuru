@@ -15,6 +15,7 @@ using DevGuru.Patterns.Mediator;
 using DevGuru.Patterns.Memento;
 using DevGuru.Patterns.Observer;
 using DevGuru.Patterns.Prototype;
+using DevGuru.Patterns.Proxy;
 
 namespace DevGuru.Console
 {
@@ -57,6 +58,7 @@ namespace DevGuru.Console
                     "memento" => new MementoPattern(),
                     "observer" => new ObserverPattern(),
                     "prototype" or "proto" => new PrototypePattern(),
+                    "proxy" => new ProxyPattern(),
                     _ => null
                 };
 
@@ -88,34 +90,6 @@ namespace DevGuru.Console
             //var exportVisitor = new XmlExportVisitor();
             //Console.WriteLine(exportVisitor.Export(dot, dot2, dot3, circle, dot4));
 
-            // Proxy
-            //var proxy = new YouTubeCacheProxy();
-            //proxy.GetPopularVideos().Values.ToList().ForEach(p => Console.WriteLine(p));
-            //proxy.GetPopularVideos().Values.ToList().ForEach(p => Console.WriteLine(p));
-            //proxy.GetPopularVideos().Values.ToList().ForEach(p => Console.WriteLine(p));
-
-            //var video = proxy.GetVideo("turtle");
-            //Console.WriteLine(video);
-
-            //video = proxy.GetVideo("cat");
-            //Console.WriteLine(video);
-
-            //video = proxy.GetVideo("dog1");
-            //Console.WriteLine(video);
-
-            //video = proxy.GetVideo("dog");
-            //Console.WriteLine(video);
-
-            //video = proxy.GetVideo("turtle");
-            //Console.WriteLine(video);
-
-            //proxy.Reset();
-
-            //video = proxy.GetVideo("dog");
-            //Console.WriteLine(video);
-
-            //video = proxy.GetVideo("turtle");
-            //Console.WriteLine(video);
 
             // State
             //var context = new Curriculum(new BegginerLevel(), "Math");

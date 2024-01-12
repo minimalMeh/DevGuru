@@ -5,7 +5,7 @@ namespace DevGuru.Patterns.Proxy.ThirdParty
 {
     public class Video
     {
-        private static Random random = new Random();
+        private static readonly Random random = new();
 
         public string Id { get; }
 
@@ -17,12 +17,11 @@ namespace DevGuru.Patterns.Proxy.ThirdParty
         {
             Id = id;
             Title = title;
-            Data = $"Random video content: {GetRandomString()}";
+            Data = $"**** {GetRandomString()} ****";
         }
 
-        private string GetRandomString()
+        private static string GetRandomString(int length = 10)
         {
-            int length = 10;
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, length)
                 .Select(s => s[random.Next(s.Length)]).ToArray());
@@ -30,7 +29,7 @@ namespace DevGuru.Patterns.Proxy.ThirdParty
 
         public override string ToString()
         {
-            return $"\tVideo {Title} with Id {Id}:\n\t*{Data}*\n";
+            return $"\t[\"{Id}\" video, \"{Title}\": {Data}]";
         }
     }
 }

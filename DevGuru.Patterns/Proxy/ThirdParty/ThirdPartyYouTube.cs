@@ -8,19 +8,19 @@ namespace DevGuru.Patterns.Proxy.ThirdParty
     {
         public Dictionary<string, Video> GetPopularVideos()
         {
-            Console.WriteLine("Connecting to the http://www.youtube.com/");
-            Thread.Sleep(500);
+            Console.WriteLine($"{nameof(GetPopularVideos)}: Connecting to the http://www.youtube.com/ ...");
+            Thread.Sleep(200);
             return GetRandomVideos();
         }
 
         public Video GetVideo(string videoId)
         {
-            Thread.Sleep(600);
-            Console.WriteLine("Connecting to the http://www.youtube.com/");
+            Console.WriteLine($"{nameof(GetVideo)} \"{videoId}\": Connecting to the http://www.youtube.com/ ...");
+            Thread.Sleep(100);
             return new Video(videoId, videoId.ToUpper());
         }
 
-        private Dictionary<string, Video> GetRandomVideos()
+        private static Dictionary<string, Video> GetRandomVideos()
         {
             var videos = new Dictionary<string, Video>
             {

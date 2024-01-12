@@ -7,23 +7,21 @@ namespace DevGuru.Patterns.Proxy
 {
     public class YouTubeCacheProxy : IYouTubeLibrary
     {
-        private readonly Lazy<ThirdPartyYouTube> youTubeLazy = new Lazy<ThirdPartyYouTube>();
-        private ThirdPartyYouTube YouTubeLib => youTubeLazy.Value;
+        private readonly Lazy<ThirdPartyYouTube> youTubeLazy = new();
+        private ThirdPartyYouTube YouTubeConnector => youTubeLazy.Value;
 
-        private readonly Dictionary<string, Video> cacheAllVideos = new Dictionary<string, Video>();
-        private Dictionary<string, Video> cachePopularVideos = new Dictionary<string, Video>();
-
-        private const string CACHE_MASK = "CACHE: ";
+        private readonly Dictionary<string, Video> cacheAllVideos = new();
+        private Dictionary<string, Video> cachePopularVideos = new();
 
         public Dictionary<string, Video> GetPopularVideos()
         {
             if (!cachePopularVideos.Any())
             {
-                cachePopularVideos = YouTubeLib.GetPopularVideos();
+                cachePopularVideos = YouTubeConnector.GetPopularVideos();
             }
             else
             {
-                Console.WriteLine(CACHE_MASK + "Retrieved popular from cache.");
+                Console.WriteLine($"_cache_ : {nameof(cachePopularVideos).ToUpper()}");
             }
 
             return cachePopularVideos;
@@ -33,17 +31,17 @@ namespace DevGuru.Patterns.Proxy
         {
             if (cacheAllVideos.ContainsKey(videoId))
             {
-                Console.WriteLine(CACHE_MASK + "Returned from all videos cache.");
+                Console.WriteLine($"_cache_ : {videoId}, {nameof(cacheAllVideos).ToUpper()}");
                 return cacheAllVideos[videoId];
             }
             else if (cachePopularVideos.ContainsKey(videoId))
             {
-                Console.WriteLine(CACHE_MASK + "Returned from popular videos cache.");
+                Console.WriteLine($"_cache_ : {videoId}, {nameof(cachePopularVideos).ToUpper()}");
                 return cachePopularVideos[videoId];
             }
             else
             {
-                var video = YouTubeLib.GetVideo(videoId);
+                var video = YouTubeConnector.GetVideo(videoId);
                 cacheAllVideos[videoId] = video;
                 return video;
             }
@@ -51,6 +49,7 @@ namespace DevGuru.Patterns.Proxy
 
         public void Reset()
         {
+            Console.WriteLine("_cache_ reset...");
             cachePopularVideos.Clear();
             cacheAllVideos.Clear();
         }
