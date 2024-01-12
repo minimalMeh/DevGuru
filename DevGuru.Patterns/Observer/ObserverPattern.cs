@@ -6,7 +6,7 @@ using System;
 
 namespace DevGuru.Patterns.Observer
 {
-    public class ObserverPattern : BasePattern
+    public class ObserverPattern : PatternBase
     {
         public override string Name => "Observer";
         protected override string DescriptionFormatted => "\t[Defines a one-to-many dependency between objects so that when one object changes state,]\n\t[all its dependents are notified and updated automatically.]\n";

@@ -3,7 +3,7 @@ using System;
 
 namespace DevGuru.Patterns.Builder
 {
-    public class BuilderPattern : BasePattern
+    public class BuilderPattern : PatternBase
     {
         public override string Name => "Builder";
         protected override string DescriptionFormatted => "\t[Separates the construction of a complex object from its representation,]\n\t[allowing the same construction process to create different representations.]\n";

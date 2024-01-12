@@ -3,7 +3,7 @@ using System;
 
 namespace DevGuru.Patterns.Memento
 {
-    public class MementoPattern : BasePattern
+    public class MementoPattern : PatternBase
     {
         public override string Name => "Memento";
         protected override string DescriptionFormatted => "\t[Captures and externalizes an object's internal state so that the object]\n\t[can be restored to this state later, without exposing its internal structure.]\n";

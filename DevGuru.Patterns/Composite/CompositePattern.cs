@@ -3,7 +3,7 @@ using System;
 
 namespace DevGuru.Patterns.Compose
 {
-    public class CompositePattern : BasePattern
+    public class CompositePattern : PatternBase
     {
         public override string Name => "Composite";
         protected override string DescriptionFormatted => "\t[Composes objects into tree structures to represent part-whole hierarchies,]\n\t[allowing clients to treat individual objects and compositions of objects uniformly.]\n";

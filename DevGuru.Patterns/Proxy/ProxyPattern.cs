@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DevGuru.Patterns.Proxy
 {
-    public class ProxyPattern : BasePattern
+    public class ProxyPattern : PatternBase
     {
         public override string Name => "Proxy";
         protected override string DescriptionFormatted => "\t[Controls access to an object by serving as a surrogate or placeholder,]\n\t[enabling additional functionality such as lazy loading, access control, or logging.]\n";

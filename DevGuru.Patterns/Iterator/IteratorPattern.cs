@@ -3,7 +3,7 @@ using System;
 
 namespace DevGuru.Patterns.Iterator
 {
-    public class IteratorPattern : BasePattern
+    public class IteratorPattern : PatternBase
     {
         public override string Name => "Iterator";
         protected override string DescriptionFormatted => "\t[Provides a way to access the elements of an aggregate object sequentially without exposing its]\n\t[underlying representation, allowing for different ways to traverse the collection.]\n";

@@ -2,7 +2,7 @@
 
 namespace DevGuru.Patterns.ChainOfResponsibility
 {
-    public class ChainOfResponsibilityPattern : BasePattern
+    public class ChainOfResponsibilityPattern : PatternBase
     {
         public override string Name => "Chain Of Responsibility";
         protected override string DescriptionFormatted => "\t[Passes a request along a chain of handlers, each processing the request or passing it]\n\t[to the next handler in the chain, providing a way to decouple senders and receivers.]\n";

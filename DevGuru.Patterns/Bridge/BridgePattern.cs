@@ -4,7 +4,7 @@ using DevGuru.Patterns.Bridge.Speakers;
 
 namespace DevGuru.Patterns.Bridge
 {
-    public class BridgePattern : BasePattern
+    public class BridgePattern : PatternBase
     {
         public override string Name => "Bridge";
         protected override string DescriptionFormatted => "\t[Separates abstraction from implementation, allowing both to evolve independently,]\n\t[and promoting the composition of objects instead of inheritance.]\n";

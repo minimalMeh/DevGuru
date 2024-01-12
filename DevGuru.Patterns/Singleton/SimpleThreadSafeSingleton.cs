@@ -1,13 +1,15 @@
-﻿namespace DevGuru.Patterns.Singleton
+﻿using System;
+
+namespace DevGuru.Patterns.Singleton
 {
     public sealed class SimpleThreadSafeSingleton
     {
         private static SimpleThreadSafeSingleton instance = null;
-        private static readonly object padlock = new object();
+        private static readonly object padlock = new();
 
         private SimpleThreadSafeSingleton()
         {
-            System.Console.WriteLine("TOP 2: SimpleThreadSafeSingleton Created.");
+            Console.WriteLine("TOP 2: SimpleThreadSafeSingleton.");
         }
 
         public static SimpleThreadSafeSingleton Instance
@@ -16,12 +18,7 @@
             {
                 lock (padlock)
                 {
-                    if (instance == null)
-                    {
-                        instance = new SimpleThreadSafeSingleton();
-                    }
-
-                    return instance;
+                    return instance ??= new SimpleThreadSafeSingleton();
                 }
             }
         }

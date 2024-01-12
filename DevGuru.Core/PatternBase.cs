@@ -2,7 +2,7 @@
 
 namespace DevGuru.Core
 {
-    public abstract class BasePattern : IPattern
+    public abstract class PatternBase : IPattern
     {
         public abstract string Name { get; }
         protected abstract string DescriptionFormatted { get; }

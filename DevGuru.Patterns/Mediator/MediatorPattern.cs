@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace DevGuru.Patterns.Mediator
 {
-    public class MediatorPattern : BasePattern
+    public class MediatorPattern : PatternBase
     {
         public override string Name => "Mediator";
         protected override string DescriptionFormatted => "\t[Defines an object that centralizes communication between a set of objects,]\n\t[promoting loose coupling and reducing direct connections between them.]\n";

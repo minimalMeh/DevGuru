@@ -2,7 +2,7 @@
 
 namespace DevGuru.Patterns.Command
 {
-    public class CommandPattern : BasePattern
+    public class CommandPattern : PatternBase
     {
         public override string Name => "Command";
         protected override string DescriptionFormatted => "\t[Encapsulates a request as an object, allowing for parameterization of clients]\n\t[with different requests, queuing of requests, and support for undoable operations.]\n";

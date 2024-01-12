@@ -3,7 +3,7 @@ using System;
 
 namespace DevGuru.Patterns.Prototype
 {
-    public class PrototypePattern : BasePattern
+    public class PrototypePattern : PatternBase
     {
         public override string Name => "Prototype";
         protected override string DescriptionFormatted => "\t[Creates new objects by copying an existing object,]\n\t[allowing for the creation of new instances without specifying their concrete classes.]\n";

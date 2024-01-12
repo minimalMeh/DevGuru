@@ -2,7 +2,7 @@
 
 namespace DevGuru.Patterns.Adapter
 {
-    public class AdapterPattern : BasePattern
+    public class AdapterPattern : PatternBase
     {
         public override string Name => "Adapter";
         protected override string DescriptionFormatted => "\t[Allows the interface of an existing class to be used as another interface,]\n\t[facilitating the collaboration between incompatible interfaces.]\n";

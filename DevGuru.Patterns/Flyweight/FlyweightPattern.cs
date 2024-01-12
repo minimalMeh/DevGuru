@@ -3,7 +3,7 @@ using DevGuru.Patterns.Flyweight.Constants;
 
 namespace DevGuru.Patterns.Flyweight
 {
-    public class FlyweightPattern : BasePattern
+    public class FlyweightPattern : PatternBase
     {
         public override string Name => "Flyweight";
         protected override string DescriptionFormatted => "\t[Minimizes RAM memory usage or computational expenses by sharing as much as possible with related objects,]\n\t[particularly useful when dealing with a large number of similar objects.]\n";

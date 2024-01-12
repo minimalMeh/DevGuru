@@ -3,7 +3,7 @@ using System;
 
 namespace DevGuru.Patterns.FactoryMethod
 {
-    public class FactoryMethodPattern : BasePattern
+    public class FactoryMethodPattern : PatternBase
     {
         public override string Name => "Factory Method";
         protected override string DescriptionFormatted => "\t[Defines an interface for creating an object but allows subclasses to alter the type of objects]\n\t[that will be created, encapsulating the object creation logic.]\n";

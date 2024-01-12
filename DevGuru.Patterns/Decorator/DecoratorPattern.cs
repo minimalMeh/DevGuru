@@ -3,7 +3,7 @@ using System;
 
 namespace DevGuru.Patterns.Decorator
 {
-    public class DecoratorPattern : BasePattern
+    public class DecoratorPattern : PatternBase
     {
         public override string Name => "Decorator";
         protected override string DescriptionFormatted => "\t[Attaches additional responsibilities to an object dynamically, providing]\n\t[a flexible alternative to subclassing for extending functionality.]\n";

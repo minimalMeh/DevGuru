@@ -16,6 +16,7 @@ using DevGuru.Patterns.Memento;
 using DevGuru.Patterns.Observer;
 using DevGuru.Patterns.Prototype;
 using DevGuru.Patterns.Proxy;
+using DevGuru.Patterns.Singleton;
 
 namespace DevGuru.Console
 {
@@ -59,6 +60,7 @@ namespace DevGuru.Console
                     "observer" => new ObserverPattern(),
                     "prototype" or "proto" => new PrototypePattern(),
                     "proxy" => new ProxyPattern(),
+                    "singleton" or "single" => new SingletonPattern(),
                     _ => null
                 };
 
@@ -71,14 +73,6 @@ namespace DevGuru.Console
                     pattern?.Run();
                 }
             }
-
-            // Singleton 
-            // https://csharpindepth.com/Articles/Singleton
-            // Top-1
-            //NotLazyButThreadSafeWithoutLocksSingleton singleton = NotLazyButThreadSafeWithoutLocksSingleton.Instance;
-            //SimpleThreadSafeSingleton singleton2 = SimpleThreadSafeSingleton.Instance;
-            //ModernLazyTypedSingleton singleton3 = ModernLazyTypedSingleton.Instance;
-            //FullyLazyInstantiationSingleton singleton4 = FullyLazyInstantiationSingleton.Instance;
 
             // Visitor
             //var dot = new Dot(1, 10, 20);

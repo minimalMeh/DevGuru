@@ -3,7 +3,7 @@ using System;
 
 namespace DevGuru.Patterns.AbstractFactory
 {
-    public class AbstractFactoryPattern : BasePattern
+    public class AbstractFactoryPattern : PatternBase
     {
         public override string Name => "Abstract Factory";
         protected override string DescriptionFormatted => "\t[Provides an interface for creating families of related or dependent objects]\n\t[without specifying their concrete classes, promoting flexibility in object creation.]\n";
