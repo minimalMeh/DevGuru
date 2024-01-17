@@ -17,7 +17,7 @@ namespace DevGuru.Patterns.State
 
         public void TransitionTo(CurriculumState state)
         {
-            Console.WriteLine($"\n***[{SubjectName}] Level is {state.Level.GetName()}.***");
+            Console.WriteLine($"\n***[{SubjectName}] Level {state.Level.GetName()}.***");
             this.state = state;
             state.SetCurriculum(this);
         }
