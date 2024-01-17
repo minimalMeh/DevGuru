@@ -4,52 +4,69 @@ using System.Linq;
 
 namespace DevGuru.Patterns.State
 {
-    public class Curriculum // context
+    public class Curriculum
     {
         private CurriculumState state;
-        public string Subject { get; }
+        public string SubjectName { get; }
 
         public Curriculum(CurriculumState state, string subject)
         {
-            Subject = subject;
+            SubjectName = subject;
             TransitionTo(state);
         }
 
         public void TransitionTo(CurriculumState state)
         {
-            Console.WriteLine($"State for {Subject} is: {state.Level.GetString()}");
+            Console.WriteLine($"\n***[{SubjectName}] Level is {state.Level.GetName()}.***");
             this.state = state;
             state.SetCurriculum(this);
         }
 
-        public void ShowPreparationInstruction()
+        public void PrintPlanInfo()
         {
-            var manual = state.GetManual(Subject);
-            Console.WriteLine($"For exam preparation {state.Level.GetString()} level, {Subject} required next documents to learn:");
-            manual.ToList().ForEach(f => Console.WriteLine('\t' + f.FullName + ";"));
+            Console.WriteLine($"[{SubjectName}] {state.Level.GetName()} study plan:");
+
+            var manual = state.GetManual(SubjectName);
+
+            if (manual.Any())
+            {
+                Console.WriteLine("Document(s) to study:");
+                manual.ToList().ForEach(f => Console.WriteLine('\t' + f.FullName + ";"));
+            }
+            else
+            {
+                Console.WriteLine("No required document(s).");
+            }
         }
 
-        public void ShowRequiredExams()
+        public void PrintExamsInfo()
         {
-            var sliceExam = state.GetSliceExam(Subject);
-            var finalExam = state.GetFinalExam(Subject);
+            Console.WriteLine($"[{SubjectName}] {state.Level.GetName()} test plan:");
 
-            if (sliceExam != null)
+            var sliceExams = state.GetSliceExam(SubjectName);
+            var finalExams = state.GetFinalExam(SubjectName);
+
+            if (sliceExams.Any())
             {
-                Console.WriteLine($"For {state.Level.GetString()} level, {Subject} the next tests should be passed:");
-                sliceExam.ToList()?.ForEach(f => Console.WriteLine('\t' + f.FullName + ";"));
+                Console.WriteLine("Slice test(s) to pass:");
+                sliceExams.ToList().ForEach(f => Console.WriteLine('\t' + f.FullName + ";"));
             }
 
-            if (finalExam != null)
+            if (finalExams.Any())
             {
-                Console.WriteLine($"For {state.Level.GetString()} level, {Subject} the next tests should be passed:");
-                finalExam.ToList()?.ForEach(f => Console.WriteLine('\t' + f.FullName + ";"));
+                Console.WriteLine("Final test(s) to pass:");
+                finalExams.ToList().ForEach(f => Console.WriteLine('\t' + f.FullName + ";"));
+            }
+
+            if (!sliceExams.Any() && !finalExams.Any())
+            {
+                Console.WriteLine("No required test(s).");
             }
         }
 
         public bool Exam()
         {
-            return state.PassExam();
+            return state.ExamPassed;
         }
     }
 }

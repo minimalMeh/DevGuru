@@ -8,28 +8,22 @@ namespace DevGuru.Patterns.State.Levels
     public class IntermediateLevel : CurriculumState
     {
         public override Level Level => Level.Intermediate;
+        public override bool ExamPassed => new Random().Next(1, 4) % 2 != 0;
 
-        public override bool PassExam()
+        public override IEnumerable<FileInfo> GetManual(string subject)
         {
-            var rand = new Random().Next(1, 4);
-            return rand % 2 != 0;
+            return new List<FileInfo>
+            {
+                new($"{subject.ToLowerInvariant()}\\middle\\manual\\theory.doc"),
+                new($"{subject.ToLowerInvariant()}\\middle\\manual\\practice.doc"),
+            };
         }
 
         public override IEnumerable<FileInfo> GetFinalExam(string subject)
         {
             return new List<FileInfo>
             {
-                new FileInfo($"{subject.ToLowerInvariant()}\\middle\\teoryandpractice.doc"),
-            };
-        }
-
-        public override IEnumerable<FileInfo> GetManual(string subject)
-        {
-            return new List<FileInfo>
-            {
-                new FileInfo($"{subject.ToLowerInvariant()}\\middle\\manual\\theory.doc"),
-                new FileInfo($"{subject.ToLowerInvariant()}\\middle\\manual\\practice.doc"),
-                new FileInfo($"{subject.ToLowerInvariant()}\\middle\\manual\\articles.doc"),
+                new($"{subject.ToLowerInvariant()}\\middle\\teoryandpractice.doc"),
             };
         }
 
@@ -37,8 +31,7 @@ namespace DevGuru.Patterns.State.Levels
         {
             return new List<FileInfo>
             {
-                new FileInfo($"{subject.ToLowerInvariant()}\\begginers\\final\\theory.doc"),
-                new FileInfo($"{subject.ToLowerInvariant()}\\begginers\\final\\practice.doc"),
+                new($"{subject.ToLowerInvariant()}\\begginers\\slice\\theory.doc"),
             };
         }
     }

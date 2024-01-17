@@ -17,6 +17,7 @@ using DevGuru.Patterns.Observer;
 using DevGuru.Patterns.Prototype;
 using DevGuru.Patterns.Proxy;
 using DevGuru.Patterns.Singleton;
+using DevGuru.Patterns.State;
 
 namespace DevGuru.Console
 {
@@ -61,6 +62,7 @@ namespace DevGuru.Console
                     "prototype" or "proto" => new PrototypePattern(),
                     "proxy" => new ProxyPattern(),
                     "singleton" or "single" => new SingletonPattern(),
+                    "state" => new StatePattern(),
                     _ => null
                 };
 
@@ -83,31 +85,6 @@ namespace DevGuru.Console
 
             //var exportVisitor = new XmlExportVisitor();
             //Console.WriteLine(exportVisitor.Export(dot, dot2, dot3, circle, dot4));
-
-
-            // State
-            //var context = new Curriculum(new BegginerLevel(), "Math");
-            //context.ShowPreparationInstruction();
-            //context.ShowRequiredExams();
-            //if (context.Exam())
-            //{
-            //    context.TransitionTo(new IntermediateLevel());
-            //    context.ShowPreparationInstruction();
-            //    context.ShowRequiredExams();
-            //    if (context.Exam())
-            //    {
-            //        context.TransitionTo(new AdvancedLevel());
-            //        context.ShowPreparationInstruction();
-            //        context.ShowRequiredExams();
-            //    }
-            //}
-
-            //context = new Curriculum(new IntermediateLevel(), "Chemistry");
-            //context.ShowRequiredExams();
-            //if (context.Exam())
-            //{
-            //    context.TransitionTo(new AdvancedLevel());
-            //}
 
             // TemplateMethod
             //var passport = new FileInfo("diya\\passport.txt");

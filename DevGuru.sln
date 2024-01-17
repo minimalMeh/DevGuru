@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31129.286
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevGuru.Core", "DevGuru.Core\DevGuru.Core.csproj", "{C80098C1-EB12-444D-96FB-B929C76EBBAA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevGuru.Patterns", "DevGuru.Patterns\DevGuru.Patterns.csproj", "{F231F0F5-B0EF-443D-A221-C83504CC74E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevGuru.Resources", "DevGuru.Resources\DevGuru.Resources.csproj", "{6220FAC6-A610-4D31-AB7E-55B4BAEC09EE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevGuru.Console", "DevGuru.Console\DevGuru.Console.csproj", "{1CD7F9E1-0028-45E9-A7BC-D012FFDAFB7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevGuru.Console", "DevGuru.Console\DevGuru.Console.csproj", "{1CD7F9E1-0028-45E9-A7BC-D012FFDAFB7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +23,6 @@ Global
 		{F231F0F5-B0EF-443D-A221-C83504CC74E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F231F0F5-B0EF-443D-A221-C83504CC74E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F231F0F5-B0EF-443D-A221-C83504CC74E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6220FAC6-A610-4D31-AB7E-55B4BAEC09EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6220FAC6-A610-4D31-AB7E-55B4BAEC09EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6220FAC6-A610-4D31-AB7E-55B4BAEC09EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6220FAC6-A610-4D31-AB7E-55B4BAEC09EE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1CD7F9E1-0028-45E9-A7BC-D012FFDAFB7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1CD7F9E1-0028-45E9-A7BC-D012FFDAFB7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CD7F9E1-0028-45E9-A7BC-D012FFDAFB7A}.Release|Any CPU.ActiveCfg = Release|Any CPU

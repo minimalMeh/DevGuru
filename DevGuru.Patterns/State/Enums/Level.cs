@@ -9,15 +9,13 @@
 
     public static class LevelExtensions
     {
-        public static string GetString(this Level lvl)
-        {
-            return lvl switch
+        public static string GetName(this Level level) =>
+            level switch
             {
                 Level.Begginer => "Begginer",
                 Level.Intermediate => "Intermediate",
                 Level.Advanced => "Advanced",
-                _ => "NO VALUE GIVEN",
+                _ => "Invalid",
             };
-        }
     }
 }

@@ -2,40 +2,34 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace DevGuru.Patterns.State.Levels
 {
     public class BegginerLevel : CurriculumState
     {
         public override Level Level => Level.Begginer;
+        public override bool ExamPassed => new Random().Next(1, 3) != 0;
 
-        public override bool PassExam()
+        public override IEnumerable<FileInfo> GetManual(string subject)
         {
-            var rand = new Random().Next(1, 3);
-            return rand % 2 != 0;
+            return new List<FileInfo>
+            {
+                new($"{subject.ToLowerInvariant()}\\begginers\\manual\\theory.doc")
+            };
         }
 
         public override IEnumerable<FileInfo> GetFinalExam(string subject)
         {
             return new List<FileInfo>
             {
-                new FileInfo($"{subject.ToLowerInvariant()}\\begginers\\final\\theory.doc")
-            };
-        }
-
-        public override IEnumerable<FileInfo> GetManual(string subject)
-        {
-            return new List<FileInfo>
-            {
-                new FileInfo($"{subject.ToLowerInvariant()}\\begginers\\manual\\theory.doc"),
-                new FileInfo($"{subject.ToLowerInvariant()}\\begginers\\manual\\practice.doc"),
-                new FileInfo($"{subject.ToLowerInvariant()}\\begginers\\manual\\articles.doc"),
+                new($"{subject.ToLowerInvariant()}\\begginers\\final\\theory.doc")
             };
         }
 
         public override IEnumerable<FileInfo> GetSliceExam(string subject)
         {
-            return null;
+            return Enumerable.Empty<FileInfo>();
         }
     }
 }

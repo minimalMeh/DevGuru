@@ -8,30 +8,25 @@ namespace DevGuru.Patterns.State.Levels
     public class AdvancedLevel : CurriculumState
     {
         public override Level Level => Level.Advanced;
+        public override bool ExamPassed => new Random().Next(1, 5) != 0;
 
-        public override bool PassExam()
+        public override IEnumerable<FileInfo> GetManual(string subject)
         {
-            var rand = new Random().Next(1, 5);
-            return rand % 2 != 0;
+            return new List<FileInfo>
+            {
+                new($"{subject.ToLowerInvariant()}\\advanced\\manual\\theory.doc"),
+                new($"{subject.ToLowerInvariant()}\\advanced\\manual\\articles.doc"),
+                new($"{subject.ToLowerInvariant()}\\advanced\\manual\\taskexample.doc")
+            };
         }
 
         public override IEnumerable<FileInfo> GetFinalExam(string subject)
         {
             return new List<FileInfo>
             {
-                new FileInfo($"{subject.ToLowerInvariant()}\\advanced\\final\\practice1.doc"),
-                new FileInfo($"{subject.ToLowerInvariant()}\\advanced\\final\\practice2.doc"),
-                new FileInfo($"{subject.ToLowerInvariant()}\\advanced\\final\\patenttest.doc"),
-            };
-        }
-
-        public override IEnumerable<FileInfo> GetManual(string subject)
-        {
-            return new List<FileInfo>
-            {
-                new FileInfo($"{subject.ToLowerInvariant()}\\advanced\\manual\\theory.doc"),
-                new FileInfo($"{subject.ToLowerInvariant()}\\advanced\\manual\\articles.doc"),
-                new FileInfo($"{subject.ToLowerInvariant()}\\advanced\\manual\\patentsample.doc")
+                new($"{subject.ToLowerInvariant()}\\advanced\\final\\practice1.doc"),
+                new($"{subject.ToLowerInvariant()}\\advanced\\final\\practice2.doc"),
+                new($"{subject.ToLowerInvariant()}\\advanced\\final\\testtask.doc"),
             };
         }
 
@@ -39,7 +34,7 @@ namespace DevGuru.Patterns.State.Levels
         {
             return new List<FileInfo>
             {
-                new FileInfo($"{subject.ToLowerInvariant()}\\advanced\\slice\\patenttest.doc"),
+                new($"{subject.ToLowerInvariant()}\\advanced\\slice\\patenttest.doc"),
             };
         }
     }

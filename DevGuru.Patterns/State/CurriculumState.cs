@@ -6,20 +6,18 @@ namespace DevGuru.Patterns.State
 {
     public abstract class CurriculumState
     {
-        protected Curriculum curriculum; // context
+        protected Curriculum curriculum;
+
         public abstract Level Level { get; }
+        public abstract bool ExamPassed { get; }
+
+        public abstract IEnumerable<FileInfo> GetSliceExam(string subject);
+        public abstract IEnumerable<FileInfo> GetFinalExam(string subject);
+        public abstract IEnumerable<FileInfo> GetManual(string subject);
 
         public void SetCurriculum(Curriculum curriculum)
         {
             this.curriculum = curriculum;
         }
-
-        public abstract IEnumerable<FileInfo> GetSliceExam(string subject);
-
-        public abstract IEnumerable<FileInfo> GetFinalExam(string subject);
-
-        public abstract IEnumerable<FileInfo> GetManual(string subject);
-
-        public abstract bool PassExam();
     }
 }
