@@ -4,17 +4,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DevGuru.Patterns.Strategy.Concrete
+namespace DevGuru.Patterns.Strategy.Strategies
 {
-    public class BubbleSort<T> : ISortStrategy<T> where T : IComparable
+    public class BubbleSortStrategy<T> : ISortingStrategy<T> where T : IComparable
     {
         public IEnumerable<T> Sort(IEnumerable<T> data)
         {
-            int n = data.Count();
+            int length = data.Count();
 
-            for (int i = 0; i < n - 1; i++)
+            for (int i = 0; i < length - 1; i++)
             {
-                for (int j = 0; j < n - i - 1; j++)
+                for (int j = 0; j < length - i - 1; j++)
                 {
                     if (data.ElementAt(j).CompareTo(data.ElementAt(j + 1)) > 0)
                     {

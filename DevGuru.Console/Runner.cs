@@ -18,6 +18,7 @@ using DevGuru.Patterns.Prototype;
 using DevGuru.Patterns.Proxy;
 using DevGuru.Patterns.Singleton;
 using DevGuru.Patterns.State;
+using DevGuru.Patterns.Strategy;
 
 namespace DevGuru.Console
 {
@@ -63,6 +64,7 @@ namespace DevGuru.Console
                     "proxy" => new ProxyPattern(),
                     "singleton" or "single" => new SingletonPattern(),
                     "state" => new StatePattern(),
+                    "strategy" => new StrategyPattern(),
                     _ => null
                 };
 
@@ -92,30 +94,6 @@ namespace DevGuru.Console
             //var eSign = new FileInfo("diya\\key.dat");
             //EntrepreneurClient.SendRequestToBeEntrepreneur(new DiyaEntrepreneurService(), passport, inn, eSign);
             //EntrepreneurClient.SendRequestToBeEntrepreneur(new NotaryEnrepreneurService(), passport, inn);
-
-            // Strategy
-            //int [] array = { 1, 2, 3, 12, 312, 312, 12, 2, 3, 34, 5, 35, 2, 3, 24, 23, 31, 24, 235, 346, 4, 2, 3, 4 };
-            //string [] array2 = { "lox", "LAH", "HAHAHAH", "SASAT" , "d", "manchester", "no", "yes" , "dasha" };
-            //char [] array3 = { 'd', 'a', '2' , 'l', 'G', 'A', 'U', 'u' };
-
-            //var intSortMachine = new SortMachine<int>();
-            //var stringSortMachine = new SortMachine<string>();
-            //var charSortMachine = new SortMachine<char>();
-
-            //intSortMachine.SetStrategy(new BubbleSort<int>());
-            //stringSortMachine.SetStrategy(new SelectionSort<string>());
-
-            //intSortMachine.Sort(array);
-            //stringSortMachine.Sort(array2);
-
-            //intSortMachine.SetStrategy(new SelectionSort<int>());
-            //stringSortMachine.SetStrategy(new BubbleSort<string>());
-
-            //intSortMachine.Sort(array);
-            //stringSortMachine.Sort(array2);
-
-            //charSortMachine.SetStrategy(new BubbleSort<char>());
-            //charSortMachine.Sort(array3);
         }
     }
 }

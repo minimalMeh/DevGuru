@@ -7,6 +7,7 @@ namespace DevGuru.Patterns.State
     public class Curriculum
     {
         private CurriculumState state;
+
         public string SubjectName { get; }
 
         public Curriculum(CurriculumState state, string subject)
