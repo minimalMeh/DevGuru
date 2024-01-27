@@ -15,7 +15,7 @@ namespace DevGuru.Patterns.Visitor
             Y = y;
         }
 
-        public virtual string Accept(IVisitor visitor)
+        public virtual string XmlExport(IXmlVisitor visitor)
         {
             return visitor.VisitDot(this);
         }

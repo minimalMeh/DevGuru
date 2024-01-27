@@ -17,21 +17,16 @@ namespace DevGuru.Patterns.TemplateMethod
             SaveESign(eSign);
         }
 
-        public void SendRequest()
+        public void SendDocumentsValidationRequest()
         {
             if (IsDocumentsPackValid())
             {
-                SendDocumentsToRegistry();
+                Console.WriteLine("Documents were sent to the registry for validation...");
             }
             else
             {
-                Console.WriteLine("Documents are invalid to send request");
+                Console.WriteLine("ERROR! Documents are invalid. Can't send the validation request.");
             }
-        }
-
-        private void SendDocumentsToRegistry()
-        {
-            Console.WriteLine("The documents are sent to the registry for validation.");
         }
     }
 }

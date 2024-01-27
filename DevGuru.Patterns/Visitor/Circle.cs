@@ -11,7 +11,7 @@ namespace DevGuru.Patterns.Visitor
             Radius = radius;
         }
 
-        public override string Accept(IVisitor visitor)
+        public override string XmlExport(IXmlVisitor visitor)
         {
             return visitor.VisitCircle(this);
         }

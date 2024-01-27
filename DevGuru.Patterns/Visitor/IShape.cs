@@ -4,6 +4,8 @@
     {
         void Move(int x, int y);
         void Draw();
-        string Accept(IVisitor visitor);
+
+        //Accept
+        string XmlExport(IXmlVisitor visitor);
     }
 }

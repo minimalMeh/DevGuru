@@ -19,6 +19,8 @@ using DevGuru.Patterns.Proxy;
 using DevGuru.Patterns.Singleton;
 using DevGuru.Patterns.State;
 using DevGuru.Patterns.Strategy;
+using DevGuru.Patterns.TemplateMethod;
+using DevGuru.Patterns.Visitor;
 
 namespace DevGuru.Console
 {
@@ -37,11 +39,14 @@ namespace DevGuru.Console
                 if (string.IsNullOrWhiteSpace(patternName))
                     continue;
 
-                if (patternName == "q")
+                if (patternName == "q" || patternName == "quit")
                     break;
 
                 if (patternName == "c")
+                {
                     System.Console.Clear();
+                    continue;
+                }
 
                 IPattern pattern = patternName.ToLower() switch
                 {
@@ -65,6 +70,8 @@ namespace DevGuru.Console
                     "singleton" or "single" => new SingletonPattern(),
                     "state" => new StatePattern(),
                     "strategy" => new StrategyPattern(),
+                    "template method" or "template" => new TemplateMethodPattern(),
+                    "visitor" => new VisitorPattern(),
                     _ => null
                 };
 
@@ -77,23 +84,6 @@ namespace DevGuru.Console
                     pattern?.Run();
                 }
             }
-
-            // Visitor
-            //var dot = new Dot(1, 10, 20);
-            //var dot2 = new Dot(3, 11, 20);
-            //var dot3 = new Dot(4, 12, 20);
-            //var dot4 = new Dot(5, 13, 20);
-            //var circle = new Circle(2, 10);
-
-            //var exportVisitor = new XmlExportVisitor();
-            //Console.WriteLine(exportVisitor.Export(dot, dot2, dot3, circle, dot4));
-
-            // TemplateMethod
-            //var passport = new FileInfo("diya\\passport.txt");
-            //var inn = new FileInfo("inn.txt");
-            //var eSign = new FileInfo("diya\\key.dat");
-            //EntrepreneurClient.SendRequestToBeEntrepreneur(new DiyaEntrepreneurService(), passport, inn, eSign);
-            //EntrepreneurClient.SendRequestToBeEntrepreneur(new NotaryEnrepreneurService(), passport, inn);
         }
     }
 }
