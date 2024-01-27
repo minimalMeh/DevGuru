@@ -33,7 +33,7 @@ namespace DevGuru.Console
 
             while (true)
             {
-                System.Console.Write("Specify the pattern's name: ");
+                System.Console.Write("Pattern: ");
                 var patternName = System.Console.ReadLine()?.ToLower().Trim();
 
                 if (string.IsNullOrWhiteSpace(patternName))
@@ -77,12 +77,11 @@ namespace DevGuru.Console
 
                 if (pattern == null)
                 {
-                    System.Console.WriteLine("No such pattern found.");
+                    System.Console.WriteLine("No pattern found.");
+                    continue;
                 }
-                else
-                {
-                    pattern?.Run();
-                }
+
+                pattern.Run();
             }
         }
     }
