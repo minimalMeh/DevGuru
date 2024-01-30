@@ -1,7 +1,8 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.FactoryMethod;
 using System;
 
-namespace DevGuru.Patterns.FactoryMethod
+namespace DevGuru.Patterns
 {
     public class FactoryMethodPattern : PatternBase
     {
@@ -13,6 +14,7 @@ namespace DevGuru.Patterns.FactoryMethod
         {
             Console.Write("Win/Web: ");
             var config = Console.ReadLine().ToLowerInvariant();
+
             if (config == "q") return;
 
             var dialogService = new DialogService();

@@ -1,6 +1,7 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.ChainOfResponsibility;
 
-namespace DevGuru.Patterns.ChainOfResponsibility
+namespace DevGuru.Patterns
 {
     public class ChainOfResponsibilityPattern : PatternBase
     {

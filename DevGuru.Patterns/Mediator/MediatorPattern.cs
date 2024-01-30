@@ -1,7 +1,8 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Mediator;
 using System.Threading;
 
-namespace DevGuru.Patterns.Mediator
+namespace DevGuru.Patterns
 {
     public class MediatorPattern : PatternBase
     {

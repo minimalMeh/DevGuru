@@ -1,7 +1,8 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Builder;
 using System;
 
-namespace DevGuru.Patterns.Builder
+namespace DevGuru.Patterns
 {
     public class BuilderPattern : PatternBase
     {

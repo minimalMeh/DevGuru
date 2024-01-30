@@ -1,8 +1,9 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Proxy;
 using System;
 using System.Linq;
 
-namespace DevGuru.Patterns.Proxy
+namespace DevGuru.Patterns
 {
     public class ProxyPattern : PatternBase
     {

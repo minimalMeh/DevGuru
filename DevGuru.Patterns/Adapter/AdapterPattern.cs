@@ -1,6 +1,7 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Adapter;
 
-namespace DevGuru.Patterns.Adapter
+namespace DevGuru.Patterns
 {
     public class AdapterPattern : PatternBase
     {

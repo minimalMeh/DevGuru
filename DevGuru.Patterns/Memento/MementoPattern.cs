@@ -1,7 +1,8 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Memento;
 using System;
 
-namespace DevGuru.Patterns.Memento
+namespace DevGuru.Patterns
 {
     public class MementoPattern : PatternBase
     {

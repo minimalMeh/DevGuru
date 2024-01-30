@@ -1,7 +1,8 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Compose;
 using System;
 
-namespace DevGuru.Patterns.Compose
+namespace DevGuru.Patterns
 {
     public class CompositePattern : PatternBase
     {

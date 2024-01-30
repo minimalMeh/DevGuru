@@ -1,8 +1,9 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Strategy;
 using DevGuru.Patterns.Strategy.Strategies;
 using System;
 
-namespace DevGuru.Patterns.Strategy
+namespace DevGuru.Patterns
 {
     public class StrategyPattern : PatternBase
     {

@@ -1,8 +1,9 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.TemplateMethod;
 using System;
 using System.IO;
 
-namespace DevGuru.Patterns.TemplateMethod
+namespace DevGuru.Patterns
 {
     public class TemplateMethodPattern : PatternBase
     {

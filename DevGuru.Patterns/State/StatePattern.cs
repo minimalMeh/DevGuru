@@ -1,7 +1,8 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.State;
 using DevGuru.Patterns.State.Levels;
 
-namespace DevGuru.Patterns.State
+namespace DevGuru.Patterns
 {
     public class StatePattern : PatternBase
     {

@@ -1,7 +1,8 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Prototype;
 using System;
 
-namespace DevGuru.Patterns.Prototype
+namespace DevGuru.Patterns
 {
     public class PrototypePattern : PatternBase
     {

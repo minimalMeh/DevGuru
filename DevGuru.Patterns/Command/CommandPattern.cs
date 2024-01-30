@@ -1,6 +1,7 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Command;
 
-namespace DevGuru.Patterns.Command
+namespace DevGuru.Patterns
 {
     public class CommandPattern : PatternBase
     {

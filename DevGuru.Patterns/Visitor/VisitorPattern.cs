@@ -1,7 +1,8 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Visitor;
 using System;
 
-namespace DevGuru.Patterns.Visitor
+namespace DevGuru.Patterns
 {
     public class VisitorPattern : PatternBase
     {

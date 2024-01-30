@@ -1,6 +1,7 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Singleton;
 
-namespace DevGuru.Patterns.Singleton
+namespace DevGuru.Patterns
 {
     public class SingletonPattern : PatternBase
     {

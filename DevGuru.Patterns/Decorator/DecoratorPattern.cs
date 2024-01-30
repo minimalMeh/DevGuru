@@ -1,7 +1,8 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Decorator;
 using System;
 
-namespace DevGuru.Patterns.Decorator
+namespace DevGuru.Patterns
 {
     public class DecoratorPattern : PatternBase
     {

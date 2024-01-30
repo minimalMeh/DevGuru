@@ -4,7 +4,7 @@ using DevGuru.Patterns.Observer.Classic.Subscribers;
 using DevGuru.Patterns.Observer.Models;
 using System;
 
-namespace DevGuru.Patterns.Observer
+namespace DevGuru.Patterns
 {
     public class ObserverPattern : PatternBase
     {

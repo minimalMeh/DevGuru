@@ -1,7 +1,8 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Iterator;
 using System;
 
-namespace DevGuru.Patterns.Iterator
+namespace DevGuru.Patterns
 {
     public class IteratorPattern : PatternBase
     {

@@ -1,7 +1,8 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Flyweight;
 using DevGuru.Patterns.Flyweight.Constants;
 
-namespace DevGuru.Patterns.Flyweight
+namespace DevGuru.Patterns
 {
     public class FlyweightPattern : PatternBase
     {

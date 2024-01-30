@@ -1,7 +1,8 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.AbstractFactory;
 using System;
 
-namespace DevGuru.Patterns.AbstractFactory
+namespace DevGuru.Patterns
 {
     public class AbstractFactoryPattern : PatternBase
     {

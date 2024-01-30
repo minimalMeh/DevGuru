@@ -1,6 +1,7 @@
 ﻿using DevGuru.Core;
+using DevGuru.Patterns.Facade;
 
-namespace DevGuru.Patterns.Facade
+namespace DevGuru.Patterns
 {
     public class FacadePattern : PatternBase
     {
@@ -10,7 +11,7 @@ namespace DevGuru.Patterns.Facade
 
         protected override void RunCore()
         {
-            Client.Operation(new Facade(new SubSystemPrimary(), new SubSystemSecondary()));
+            Client.Operation(new Facade.Facade(new SubSystemPrimary(), new SubSystemSecondary()));
         }
     }
 }

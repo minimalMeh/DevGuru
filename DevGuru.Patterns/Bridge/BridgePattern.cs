@@ -2,7 +2,7 @@
 using DevGuru.Patterns.Bridge.Controls;
 using DevGuru.Patterns.Bridge.Speakers;
 
-namespace DevGuru.Patterns.Bridge
+namespace DevGuru.Patterns
 {
     public class BridgePattern : PatternBase
     {
