@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace DevGuru.Core
 {
-    [Flags]
+    //[Flags]
     public enum Pattern
     {
         None = 0,
@@ -63,7 +63,7 @@ namespace DevGuru.Core
             { Pattern.Visitor, new [] { "visitor", "vstr", "visit"} }
         };
 
-        public static Dictionary<Pattern, string[]> PatternAliases => patternAliases;
+        public static IReadOnlyDictionary<Pattern, string[]> PatternAliases => patternAliases;
 
         public static IPattern GetPatternByAlias(string patternAlias)
         {

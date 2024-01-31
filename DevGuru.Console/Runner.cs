@@ -52,12 +52,12 @@ namespace DevGuru.Console
             System.Console.WriteLine("--------- INFO ----------");
             System.Console.WriteLine("/q - exit");
             System.Console.WriteLine("/c - clean console");
-            System.Console.WriteLine("/h - print information");
+            System.Console.WriteLine("/h - help");
             System.Console.WriteLine("-------------------------");
 
             System.Console.WriteLine("Enter one of the patterns aliases:");
             List<string> patternsInstructions = PatternsCollection.PatternAliases.Select(p => $"{p.Key} - [{string.Join(", ", p.Value)}]").ToList();
-            patternsInstructions.ForEach(p => System.Console.WriteLine(p));
+            patternsInstructions.ForEach(System.Console.WriteLine);
             System.Console.WriteLine("-------------------------");
         }
     }
