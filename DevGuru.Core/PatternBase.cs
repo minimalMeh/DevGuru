@@ -14,16 +14,16 @@ namespace DevGuru.Core
         {
             Console.WriteLine("/------------------------------------------------\\");
 
-            ConsoleOutputIntroduction();
+            ConsoleOutputIntro();
 
-            Console.WriteLine(IdeaFormatted);
+            ConsoleOutputIdea();
 
-            RunCore();
+            ConsoleOutputRun();
 
             Console.WriteLine("\\------------------------------------------------/\n");
         }
 
-        private void ConsoleOutputIntroduction()
+        private void ConsoleOutputIntro()
         {
             Console.ForegroundColor = ConsoleColor.Green;
 
@@ -31,6 +31,26 @@ namespace DevGuru.Core
             Console.WriteLine(DescriptionFormatted);
 
             Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        private void ConsoleOutputIdea()
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+
+            Console.WriteLine(IdeaFormatted);
+
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        private void ConsoleOutputRun()
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta;
+
+            Console.WriteLine($"\t[{Name}Pattern.cs   RunCore()]\n");
+
+            Console.ForegroundColor = ConsoleColor.White;
+
+            RunCore();
         }
     }
 }
